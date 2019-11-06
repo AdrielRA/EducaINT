@@ -46,13 +46,14 @@
             this.btn_Jogar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lbl_Titulo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_Arte = new System.Windows.Forms.PictureBox();
+            this.elip_Foto = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_Perfil.SuspendLayout();
             this.pnl_Prog_2.SuspendLayout();
             this.pnl_Prog_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Aluno)).BeginInit();
             this.pnl_BG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Arte)).BeginInit();
             this.SuspendLayout();
             // 
             // elip_Form
@@ -97,7 +98,7 @@
             this.prog_Bar_2.Location = new System.Drawing.Point(6, 31);
             this.prog_Bar_2.MaximumValue = 100;
             this.prog_Bar_2.Name = "prog_Bar_2";
-            this.prog_Bar_2.ProgressColor = System.Drawing.Color.Teal;
+            this.prog_Bar_2.ProgressColor = System.Drawing.Color.MidnightBlue;
             this.prog_Bar_2.Size = new System.Drawing.Size(222, 10);
             this.prog_Bar_2.TabIndex = 10;
             this.prog_Bar_2.Value = 68;
@@ -130,7 +131,7 @@
             this.prog_Bar_1.Location = new System.Drawing.Point(6, 33);
             this.prog_Bar_1.MaximumValue = 100;
             this.prog_Bar_1.Name = "prog_Bar_1";
-            this.prog_Bar_1.ProgressColor = System.Drawing.Color.Teal;
+            this.prog_Bar_1.ProgressColor = System.Drawing.Color.MidnightBlue;
             this.prog_Bar_1.Size = new System.Drawing.Size(222, 10);
             this.prog_Bar_1.TabIndex = 9;
             this.prog_Bar_1.Value = 25;
@@ -153,6 +154,7 @@
             this.pic_Aluno.Location = new System.Drawing.Point(12, 12);
             this.pic_Aluno.Name = "pic_Aluno";
             this.pic_Aluno.Size = new System.Drawing.Size(241, 175);
+            this.pic_Aluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Aluno.TabIndex = 8;
             this.pic_Aluno.TabStop = false;
             // 
@@ -289,7 +291,7 @@
             this.pnl_BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_BG.Controls.Add(this.lbl_Titulo);
             this.pnl_BG.Controls.Add(this.pnl_Perfil);
-            this.pnl_BG.Controls.Add(this.pictureBox1);
+            this.pnl_BG.Controls.Add(this.pic_Arte);
             this.pnl_BG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_BG.GradientBottomLeft = System.Drawing.Color.DarkTurquoise;
             this.pnl_BG.GradientBottomRight = System.Drawing.Color.MidnightBlue;
@@ -317,19 +319,24 @@
             this.lbl_Titulo.Text = "EDUCAINT";
             this.lbl_Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // pic_Arte
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pic_Arte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::EducaINT.Properties.Resources.BG_Perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(259, 215);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(541, 235);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pic_Arte.BackColor = System.Drawing.Color.Transparent;
+            this.pic_Arte.Image = global::EducaINT.Properties.Resources.BG_Perfil;
+            this.pic_Arte.Location = new System.Drawing.Point(259, 215);
+            this.pic_Arte.Name = "pic_Arte";
+            this.pic_Arte.Size = new System.Drawing.Size(541, 235);
+            this.pic_Arte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_Arte.TabIndex = 6;
+            this.pic_Arte.TabStop = false;
+            // 
+            // elip_Foto
+            // 
+            this.elip_Foto.ElipseRadius = 30;
+            this.elip_Foto.TargetControl = this.pic_Aluno;
             // 
             // frm_Perfil
             // 
@@ -348,7 +355,7 @@
             this.pnl_Prog_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Aluno)).EndInit();
             this.pnl_BG.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Arte)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,7 +369,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label lbl_Info;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Sair;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_Arte;
         private Bunifu.Framework.UI.BunifuElipse elip_Form;
         private Bunifu.Framework.UI.BunifuElipse elip_PanelPerfil;
         private System.Windows.Forms.Panel pnl_Prog_2;
@@ -372,5 +379,6 @@
         private Bunifu.Framework.UI.BunifuProgressBar prog_Bar_1;
         private System.Windows.Forms.Label lbl_Pro_Desc_1;
         private System.Windows.Forms.PictureBox pic_Aluno;
+        private Bunifu.Framework.UI.BunifuElipse elip_Foto;
     }
 }

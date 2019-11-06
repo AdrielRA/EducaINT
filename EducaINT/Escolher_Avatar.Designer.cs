@@ -30,34 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Escolher_Avatar));
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.circ_Panel = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_Avatares = new System.Windows.Forms.Panel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.circ_Form = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.btn_Avançar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.flw_Avatares = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnl_Avatares.SuspendLayout();
             this.pnl_BG.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuElipse2
+            // circ_Panel
             // 
-            this.bunifuElipse2.ElipseRadius = 10;
-            this.bunifuElipse2.TargetControl = this.pnl_Avatares;
+            this.circ_Panel.ElipseRadius = 10;
+            this.circ_Panel.TargetControl = this.pnl_Avatares;
             // 
             // pnl_Avatares
             // 
             this.pnl_Avatares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_Avatares.Controls.Add(this.flw_Avatares);
             this.pnl_Avatares.Location = new System.Drawing.Point(12, 55);
             this.pnl_Avatares.Name = "pnl_Avatares";
             this.pnl_Avatares.Size = new System.Drawing.Size(776, 331);
             this.pnl_Avatares.TabIndex = 0;
             // 
-            // bunifuElipse1
+            // circ_Form
             // 
-            this.bunifuElipse1.ElipseRadius = 10;
-            this.bunifuElipse1.TargetControl = this;
+            this.circ_Form.ElipseRadius = 10;
+            this.circ_Form.TargetControl = this;
             // 
             // pnl_BG
             // 
@@ -128,6 +131,15 @@
             this.btn_Avançar.TextFont = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
             this.btn_Avançar.Click += new System.EventHandler(this.btn_Avançar_Click);
             // 
+            // flw_Avatares
+            // 
+            this.flw_Avatares.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flw_Avatares.Location = new System.Drawing.Point(10, 10);
+            this.flw_Avatares.Margin = new System.Windows.Forms.Padding(10);
+            this.flw_Avatares.Name = "flw_Avatares";
+            this.flw_Avatares.Size = new System.Drawing.Size(756, 312);
+            this.flw_Avatares.TabIndex = 0;
+            // 
             // frm_Escolher_Avatar
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -140,6 +152,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form2";
+            this.pnl_Avatares.ResumeLayout(false);
             this.pnl_BG.ResumeLayout(false);
             this.pnl_BG.PerformLayout();
             this.ResumeLayout(false);
@@ -148,11 +161,12 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse circ_Panel;
         private System.Windows.Forms.Panel pnl_Avatares;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Avançar;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse circ_Form;
         private Bunifu.Framework.UI.BunifuGradientPanel pnl_BG;
         private System.Windows.Forms.Label lbl_Titulo;
+        private System.Windows.Forms.FlowLayoutPanel flw_Avatares;
     }
 }

@@ -15,6 +15,7 @@ namespace EducaINT
         public frm_Login()
         {
             InitializeComponent();
+            Data_Controller.Start_Controller();
             lbl_Titulo.Parent = pic_Banner;
         }
 

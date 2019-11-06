@@ -15,10 +15,12 @@ namespace EducaINT
         public frm_Perfil()
         {
             InitializeComponent();
+            pic_Aluno.Image = new Bitmap(frm_Escolher_Avatar.avatar);
         }
 
         private void btn_Sair_Click(object sender, EventArgs e)
         {
+            pic_Aluno.Image.Dispose();
             Close();
         }
 

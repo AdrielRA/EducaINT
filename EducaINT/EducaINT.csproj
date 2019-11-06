@@ -41,6 +41,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>dlls\LollipoUi.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -66,6 +69,7 @@
     <Compile Include="Cadastro_Pergunta.Designer.cs">
       <DependentUpon>Cadastro_Pergunta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data_Controller.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +88,7 @@
     <Compile Include="Perfil.Designer.cs">
       <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pergunta.cs" />
     <Compile Include="Professor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +143,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
