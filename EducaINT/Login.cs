@@ -12,6 +12,8 @@ namespace EducaINT
 {
     public partial class frm_Login : Form
     {
+        public static Aluno aluno_logado = null;
+
         public frm_Login()
         {
             InitializeComponent();
@@ -23,8 +25,17 @@ namespace EducaINT
 
         private void btn_Entrar_Click(object sender, EventArgs e)
         {
+            aluno_logado = new Aluno();
+            // dados do aluno
+            if (!Aluno_Registrado(aluno_logado)) { Data_Controller.Add_Aluno(aluno_logado); }
             new frm_Escolher_Avatar().ShowDialog();
             new frm_Perfil().ShowDialog();
+        }
+
+        private bool Aluno_Registrado(Aluno aluno_logado)
+        {
+            // validar aluno
+            return true;
         }
 
         private void btn_Professor_Click(object sender, EventArgs e)

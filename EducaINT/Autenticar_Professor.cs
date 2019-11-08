@@ -22,6 +22,7 @@ namespace EducaINT
 
         private void btn_Acessar_Click(object sender, EventArgs e)
         {
+            // validar acesso professor
             liberar = true;
             Close();
         }

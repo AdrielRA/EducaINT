@@ -12,6 +12,7 @@ namespace EducaINT
 {
     public partial class frm_Cadastro_Pergunta : Form
     {
+        private Pergunta pergunta;
         public frm_Cadastro_Pergunta()
         {
             InitializeComponent();
@@ -24,6 +25,9 @@ namespace EducaINT
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
+            pergunta = new Pergunta();
+            // preencher dados pergunta;
+            Data_Controller.Add_Pergunta(pergunta);
             Close();
         }
     }

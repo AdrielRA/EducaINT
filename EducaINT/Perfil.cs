@@ -16,6 +16,7 @@ namespace EducaINT
         {
             InitializeComponent();
             pic_Aluno.Image = new Bitmap(frm_Escolher_Avatar.avatar);
+            // nome e demais dados vem de frm_Login.aluno_logado;
         }
 
         private void btn_Sair_Click(object sender, EventArgs e)

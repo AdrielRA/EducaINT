@@ -19,7 +19,19 @@ namespace EducaINT
         {
             InitializeComponent();
             avatares = new List<Bitmap>();
+            avatar = null;
             Load_Avatares();
+            if (frm_Login.aluno_logado.Id_avatar >= 0)
+            {
+                foreach (Control c in flw_Avatares.Controls)
+                {
+                    if(c is PictureBox && c.Tag != null && int.Parse(c.Tag.ToString()) == frm_Login.aluno_logado.Id_avatar)
+                    {
+                        Select_Avatar_Click(this, new EventArgs(), c as PictureBox);
+                    }
+                }
+                
+            }
         }
 
         private void Load_Avatares()
@@ -48,7 +60,8 @@ namespace EducaINT
 
         private void Select_Avatar_Click(object sender, EventArgs e, PictureBox pic_avatar)
         {
-            avatar = avatares[int.Parse(pic_avatar.Tag.ToString())];
+            frm_Login.aluno_logado.Id_avatar = int.Parse(pic_avatar.Tag.ToString());
+            avatar = avatares[frm_Login.aluno_logado.Id_avatar];
             foreach(Control c in flw_Avatares.Controls)
             {
                 if(c is PictureBox)
@@ -63,7 +76,7 @@ namespace EducaINT
         private void btn_Avançar_Click(object sender, EventArgs e)
         {
             if (avatar == null) { MessageBox.Show("Selecione seu avatar primeiro!"); }
-            else Close();
+            else { Data_Controller.Save_Alunos_To_Storage(); Close(); }
         }
     }
 }
