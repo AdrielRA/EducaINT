@@ -8,10 +8,13 @@ namespace EducaINT
 {
     public class Aluno
     {
-        // Aqui todos os metodos e propriedades para esta classe!
+        private string nome, senha;
+
         private int id_avatar;
 
         public int Id_avatar { get => id_avatar; set => id_avatar = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public string Senha { get => senha; set => senha = value; }
 
         public Aluno()
         {

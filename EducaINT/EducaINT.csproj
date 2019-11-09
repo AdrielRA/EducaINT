@@ -70,6 +70,7 @@
     <Compile Include="Cadastro_Pergunta.Designer.cs">
       <DependentUpon>Cadastro_Pergunta.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClasseProf.cs" />
     <Compile Include="Data_Controller.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>

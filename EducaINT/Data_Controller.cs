@@ -18,6 +18,7 @@ namespace EducaINT
         private static List<Pergunta> perguntas = null;
 
         public static List<Pergunta> Perguntas { get => perguntas; }
+        public static List<Aluno> Alunos { get => alunos; }
 
         public static void Start_Controller()
         {
@@ -27,8 +28,8 @@ namespace EducaINT
             path_perguntas = path_data + "perguntas.json";
             path_alunos = path_data + "alunos.json";
 
-            alunos = Load_Alunos();
-            if (alunos == null) alunos = new List<Aluno>();
+            Alunos = Load_Alunos();
+            if (Alunos == null) Alunos = new List<Aluno>();
 
             perguntas = Load_Perguntas();
             if (perguntas == null) perguntas = new List<Pergunta>();
@@ -79,14 +80,14 @@ namespace EducaINT
 
         public static void Add_Aluno(Aluno aluno)
         {
-            if (!alunos.Contains(aluno)) { alunos.Add(aluno); }
+            if (!Alunos.Contains(aluno)) { Alunos.Add(aluno); }
             Save_Alunos_To_Storage();
         }
         public static void Save_Alunos_To_Storage()
         {
             if (Create_Diretory(path_data))
             {
-                File.WriteAllText(path_alunos, JsonConvert.SerializeObject(alunos));
+                File.WriteAllText(path_alunos, JsonConvert.SerializeObject(Alunos));
             }
         }
 
