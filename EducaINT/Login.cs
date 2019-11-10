@@ -39,8 +39,7 @@ namespace EducaINT
             Aluno alunos = Data_Controller.Alunos.FirstOrDefault(aluno => aluno.Nome == aluno_logado.Nome && aluno.Senha ==aluno_logado.Senha);
             if (alunos == null)
                 return true;
-            else
-                return false;
+            return false;
         }
 
         private void btn_Professor_Click(object sender, EventArgs e)

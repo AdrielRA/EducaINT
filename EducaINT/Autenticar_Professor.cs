@@ -24,7 +24,8 @@ namespace EducaINT
         {
             if(txt_UsuárioProf.Text==prof.Usuario && txt_Senha.Text == prof.Senha)
                liberar = true;
-            liberar = false;
+            else
+              liberar = false;
             Close();
         }
 
