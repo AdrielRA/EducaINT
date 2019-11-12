@@ -161,10 +161,18 @@ namespace EducaINT
         {
             if (limite_pulo > 0)
             {
-                pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                Load_Pergunta(pergunta_em_jogo);
-                Tempo = TimeSpan.FromSeconds(0);
-                lbl_Pulos.Text = "Pulos: " + (--limite_pulo).ToString("00");
+                if(frm_Tema.perguntas_selecionadas.Count > 0)
+                {
+                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
+                    Load_Pergunta(pergunta_em_jogo);
+                    Tempo = TimeSpan.FromSeconds(0);
+                    lbl_Pulos.Text = "Pulos: " + (--limite_pulo).ToString("00");
+                }
+                else
+                {
+                    var result = MessageBox.Show("Esta é sua última pergunta!\n\nTentar depois?", "Opps...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if(result == DialogResult.Yes) { Close(); }
+                }
             }           
             else
             {

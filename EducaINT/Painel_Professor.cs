@@ -31,7 +31,7 @@ namespace EducaINT
 
         private void btn_Relatorio_Click(object sender, EventArgs e)
         {
-
+            new frm_Relatório().ShowDialog();
         }
     }
 }
