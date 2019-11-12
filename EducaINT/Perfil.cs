@@ -27,8 +27,15 @@ namespace EducaINT
 
         private void btn_Jogar_Click(object sender, EventArgs e)
         {
-            new frm_Tema().ShowDialog();
-            if(!frm_Tema.voltou) new frm_Jogo().ShowDialog();
+            if (Data_Controller.Perguntas.Count > 0)
+            {
+                new frm_Tema().ShowDialog();
+                if (!frm_Tema.voltou) new frm_Jogo().ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Peça ao seu professor que\ndisponibilize novas perguntas!");
+            }
         }
     }
 }

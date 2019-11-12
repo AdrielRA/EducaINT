@@ -33,22 +33,22 @@
             this.elip_Form = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_Voltar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_TemaSelect = new System.Windows.Forms.Panel();
             this.lbl_MateriaEscolhida = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_TemaInf = new System.Windows.Forms.Panel();
             this.lbl_MateriaInf = new System.Windows.Forms.Label();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_TemaTop = new System.Windows.Forms.Panel();
             this.lbl_MateriaTop = new System.Windows.Forms.Label();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbl_Frase = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.btn_Avançar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_BG.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnl_TemaSelect.SuspendLayout();
+            this.pnl_TemaInf.SuspendLayout();
+            this.pnl_TemaTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // elip_Form
@@ -61,9 +61,9 @@
             this.pnl_BG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BG.BackgroundImage")));
             this.pnl_BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_BG.Controls.Add(this.btn_Voltar);
-            this.pnl_BG.Controls.Add(this.panel1);
-            this.pnl_BG.Controls.Add(this.panel3);
-            this.pnl_BG.Controls.Add(this.panel2);
+            this.pnl_BG.Controls.Add(this.pnl_TemaSelect);
+            this.pnl_BG.Controls.Add(this.pnl_TemaInf);
+            this.pnl_BG.Controls.Add(this.pnl_TemaTop);
             this.pnl_BG.Controls.Add(this.lbl_Frase);
             this.pnl_BG.Controls.Add(this.lbl_Titulo);
             this.pnl_BG.Controls.Add(this.btn_Avançar);
@@ -103,6 +103,7 @@
             this.btn_Voltar.IconZoom = 90D;
             this.btn_Voltar.IsTab = false;
             this.btn_Voltar.Location = new System.Drawing.Point(335, 398);
+            this.btn_Voltar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Normalcolor = System.Drawing.Color.SlateGray;
             this.btn_Voltar.OnHovercolor = System.Drawing.Color.SlateGray;
@@ -116,18 +117,18 @@
             this.btn_Voltar.TextFont = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.Click += new System.EventHandler(this.btn_Voltar_Click);
             // 
-            // panel1
+            // pnl_TemaSelect
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnl_TemaSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lbl_MateriaEscolhida);
-            this.panel1.Controls.Add(this.bunifuFlatButton1);
-            this.panel1.Location = new System.Drawing.Point(335, 189);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 56);
-            this.panel1.TabIndex = 8;
+            this.pnl_TemaSelect.BackColor = System.Drawing.Color.White;
+            this.pnl_TemaSelect.Controls.Add(this.lbl_MateriaEscolhida);
+            this.pnl_TemaSelect.Controls.Add(this.bunifuFlatButton1);
+            this.pnl_TemaSelect.Location = new System.Drawing.Point(335, 189);
+            this.pnl_TemaSelect.Name = "pnl_TemaSelect";
+            this.pnl_TemaSelect.Size = new System.Drawing.Size(450, 56);
+            this.pnl_TemaSelect.TabIndex = 8;
             // 
             // lbl_MateriaEscolhida
             // 
@@ -177,18 +178,18 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel3
+            // pnl_TemaInf
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnl_TemaInf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.lbl_MateriaInf);
-            this.panel3.Controls.Add(this.bunifuFlatButton3);
-            this.panel3.Location = new System.Drawing.Point(335, 246);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 56);
-            this.panel3.TabIndex = 7;
+            this.pnl_TemaInf.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnl_TemaInf.Controls.Add(this.lbl_MateriaInf);
+            this.pnl_TemaInf.Controls.Add(this.bunifuFlatButton3);
+            this.pnl_TemaInf.Location = new System.Drawing.Point(335, 246);
+            this.pnl_TemaInf.Name = "pnl_TemaInf";
+            this.pnl_TemaInf.Size = new System.Drawing.Size(450, 56);
+            this.pnl_TemaInf.TabIndex = 7;
             // 
             // lbl_MateriaInf
             // 
@@ -238,18 +239,18 @@
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel2
+            // pnl_TemaTop
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnl_TemaTop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.lbl_MateriaTop);
-            this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Location = new System.Drawing.Point(335, 132);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 56);
-            this.panel2.TabIndex = 7;
+            this.pnl_TemaTop.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnl_TemaTop.Controls.Add(this.lbl_MateriaTop);
+            this.pnl_TemaTop.Controls.Add(this.bunifuFlatButton2);
+            this.pnl_TemaTop.Location = new System.Drawing.Point(335, 132);
+            this.pnl_TemaTop.Name = "pnl_TemaTop";
+            this.pnl_TemaTop.Size = new System.Drawing.Size(450, 56);
+            this.pnl_TemaTop.TabIndex = 7;
             // 
             // lbl_MateriaTop
             // 
@@ -348,6 +349,7 @@
             this.btn_Avançar.IconZoom = 90D;
             this.btn_Avançar.IsTab = false;
             this.btn_Avançar.Location = new System.Drawing.Point(565, 398);
+            this.btn_Avançar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_Avançar.Name = "btn_Avançar";
             this.btn_Avançar.Normalcolor = System.Drawing.Color.MidnightBlue;
             this.btn_Avançar.OnHovercolor = System.Drawing.Color.MidnightBlue;
@@ -368,13 +370,15 @@
             this.Controls.Add(this.pnl_BG);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "frm_Tema";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form4";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frm_Tema_KeyUp);
             this.pnl_BG.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnl_TemaSelect.ResumeLayout(false);
+            this.pnl_TemaInf.ResumeLayout(false);
+            this.pnl_TemaTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -385,13 +389,13 @@
         private Bunifu.Framework.UI.BunifuGradientPanel pnl_BG;
         private System.Windows.Forms.Label lbl_Titulo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Avançar;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnl_TemaInf;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_TemaTop;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.Label lbl_Frase;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Voltar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_TemaSelect;
         private System.Windows.Forms.Label lbl_MateriaEscolhida;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label lbl_MateriaInf;
