@@ -39,67 +39,57 @@ namespace EducaINT
             if(pergunta.Alternativas.Count > 0)
             {
                 lbl_Alternativa_1.Text = pergunta.Alternativas[0];
-                if(pergunta.Alternativas.Count > 1)
+                lbl_Alternativa_1.Visible = rb_Op_1.Visible = true;
+                if (pergunta.Alternativas.Count > 1)
                 {
                     lbl_Alternativa_2.Text = pergunta.Alternativas[1];
+                    lbl_Alternativa_2.Visible = rb_Op_2.Visible = true;
                     if (pergunta.Alternativas.Count > 2)
                     {
                         lbl_Alternativa_3.Text = pergunta.Alternativas[2];
+                        lbl_Alternativa_3.Visible = rb_Op_3.Visible = true;
                         if (pergunta.Alternativas.Count > 3)
                         {
                             lbl_Alternativa_4.Text = pergunta.Alternativas[3];
+                            lbl_Alternativa_4.Visible = rb_Op_4.Visible = true;
                             if (pergunta.Alternativas.Count > 4)
                             {
                                 lbl_Alternativa_5.Text = pergunta.Alternativas[4];
+                                lbl_Alternativa_5.Visible = rb_Op_5.Visible = true;
                             }
                             else
                             {
-                                lbl_Alternativa_5.Visible = false;
-                                rb_Op_5.Visible = false;
+                                lbl_Alternativa_5.Visible = rb_Op_5.Visible = false;
                             }
                         }
                         else
                         {
-                            lbl_Alternativa_4.Visible = false;
-                            rb_Op_4.Visible = false;
-                            lbl_Alternativa_5.Visible = false;
-                            rb_Op_5.Visible = false;
+                            lbl_Alternativa_4.Visible = rb_Op_4.Visible = false;
+                            lbl_Alternativa_5.Visible = rb_Op_5.Visible = false;
                         }
                     }
                     else
                     {
-                        lbl_Alternativa_3.Visible = false;
-                        rb_Op_3.Visible = false;
-                        lbl_Alternativa_4.Visible = false;
-                        rb_Op_4.Visible = false;
-                        lbl_Alternativa_5.Visible = false;
-                        rb_Op_5.Visible = false;
+                        lbl_Alternativa_3.Visible = rb_Op_3.Visible = false;
+                        lbl_Alternativa_4.Visible = rb_Op_4.Visible = false;
+                        lbl_Alternativa_5.Visible = rb_Op_5.Visible = false;
                     }
                 }
                 else
                 {
-                    lbl_Alternativa_2.Visible = false;
-                    rb_Op_2.Visible = false;
-                    lbl_Alternativa_3.Visible = false;
-                    rb_Op_3.Visible = false;
-                    lbl_Alternativa_4.Visible = false;
-                    rb_Op_4.Visible = false;
-                    lbl_Alternativa_5.Visible = false;
-                    rb_Op_5.Visible = false;                    
+                    lbl_Alternativa_2.Visible = rb_Op_2.Visible = false;
+                    lbl_Alternativa_3.Visible = rb_Op_3.Visible = false;
+                    lbl_Alternativa_4.Visible = rb_Op_4.Visible = false;
+                    lbl_Alternativa_5.Visible = rb_Op_5.Visible = false;                    
                 }
             }
             else
             {
-                lbl_Alternativa_1.Visible = false;
-                rb_Op_1.Visible = false;
-                lbl_Alternativa_2.Visible = false;
-                rb_Op_2.Visible = false;
-                lbl_Alternativa_3.Visible = false;
-                rb_Op_3.Visible = false;
-                lbl_Alternativa_4.Visible = false;
-                rb_Op_4.Visible = false;
-                lbl_Alternativa_5.Visible = false;
-                rb_Op_5.Visible = false;
+                lbl_Alternativa_1.Visible = rb_Op_1.Visible = false;
+                lbl_Alternativa_2.Visible = rb_Op_2.Visible = false;
+                lbl_Alternativa_3.Visible = rb_Op_3.Visible = false;
+                lbl_Alternativa_4.Visible = rb_Op_4.Visible = false;
+                lbl_Alternativa_5.Visible = rb_Op_5.Visible = false;
             }
         }
 
