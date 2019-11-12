@@ -25,10 +25,11 @@ namespace EducaINT
 
         private void Load_Temas()
         {
-            temas = Data_Controller.Perguntas.GroupBy(p => p.Tema).Cast<string>().ToList();
+            temas = Data_Controller.Perguntas.GroupBy(p => p.Tema).Select(t => t.Key).ToList();
             foreach(string tema in temas)
-            { 
+            {
                 // mostrar e escolher um tema
+                tema_escolhido = tema;
             }
         }
 

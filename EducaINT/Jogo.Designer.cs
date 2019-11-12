@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Jogo));
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lbl_Pulos = new LollipopLabel();
             this.lbl_Alternativa_5 = new System.Windows.Forms.Label();
             this.rb_Op_5 = new LollipopRadioButton();
             this.rb_Op_4 = new LollipopRadioButton();
@@ -52,8 +53,6 @@
             this.elip_Rb_4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_Rb_5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lollipopLabel1 = new LollipopLabel();
-            this.lbl_Pulos = new LollipopLabel();
             this.pnl_BG.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +61,6 @@
             this.pnl_BG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BG.BackgroundImage")));
             this.pnl_BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_BG.Controls.Add(this.lbl_Pulos);
-            this.pnl_BG.Controls.Add(this.lollipopLabel1);
             this.pnl_BG.Controls.Add(this.lbl_Alternativa_5);
             this.pnl_BG.Controls.Add(this.rb_Op_5);
             this.pnl_BG.Controls.Add(this.rb_Op_4);
@@ -88,6 +86,19 @@
             this.pnl_BG.Size = new System.Drawing.Size(800, 450);
             this.pnl_BG.TabIndex = 4;
             // 
+            // lbl_Pulos
+            // 
+            this.lbl_Pulos.AutoEllipsis = true;
+            this.lbl_Pulos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Pulos.Font = new System.Drawing.Font("Calibri", 12F);
+            this.lbl_Pulos.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbl_Pulos.Location = new System.Drawing.Point(625, 0);
+            this.lbl_Pulos.Name = "lbl_Pulos";
+            this.lbl_Pulos.Size = new System.Drawing.Size(69, 28);
+            this.lbl_Pulos.TabIndex = 26;
+            this.lbl_Pulos.Text = "Pulos :";
+            this.lbl_Pulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lbl_Alternativa_5
             // 
             this.lbl_Alternativa_5.BackColor = System.Drawing.Color.Transparent;
@@ -97,8 +108,10 @@
             this.lbl_Alternativa_5.Name = "lbl_Alternativa_5";
             this.lbl_Alternativa_5.Size = new System.Drawing.Size(686, 31);
             this.lbl_Alternativa_5.TabIndex = 25;
+            this.lbl_Alternativa_5.Tag = "4";
             this.lbl_Alternativa_5.Text = "Alternativa qualquer.";
             this.lbl_Alternativa_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Alternativa_5.Click += new System.EventHandler(this.lbl_Alternativa_Click);
             // 
             // rb_Op_5
             // 
@@ -112,7 +125,7 @@
             this.rb_Op_5.TabStop = true;
             this.rb_Op_5.Tag = "4";
             this.rb_Op_5.UseVisualStyleBackColor = false;
-            this.rb_Op_5.CheckedChanged += new System.EventHandler(this.Rb_Op_5_CheckedChanged);
+            this.rb_Op_5.CheckedChanged += new System.EventHandler(this.cb_Escolhe_Alternativa);
             // 
             // rb_Op_4
             // 
@@ -126,7 +139,7 @@
             this.rb_Op_4.TabStop = true;
             this.rb_Op_4.Tag = "3";
             this.rb_Op_4.UseVisualStyleBackColor = false;
-            this.rb_Op_4.CheckedChanged += new System.EventHandler(this.Rb_Op_4_CheckedChanged);
+            this.rb_Op_4.CheckedChanged += new System.EventHandler(this.cb_Escolhe_Alternativa);
             // 
             // rb_Op_3
             // 
@@ -140,7 +153,7 @@
             this.rb_Op_3.TabStop = true;
             this.rb_Op_3.Tag = "2";
             this.rb_Op_3.UseVisualStyleBackColor = false;
-            this.rb_Op_3.CheckedChanged += new System.EventHandler(this.Rb_Op_3_CheckedChanged);
+            this.rb_Op_3.CheckedChanged += new System.EventHandler(this.cb_Escolhe_Alternativa);
             // 
             // rb_Op_2
             // 
@@ -154,7 +167,7 @@
             this.rb_Op_2.TabStop = true;
             this.rb_Op_2.Tag = "1";
             this.rb_Op_2.UseVisualStyleBackColor = false;
-            this.rb_Op_2.CheckedChanged += new System.EventHandler(this.Rb_Op_2_CheckedChanged);
+            this.rb_Op_2.CheckedChanged += new System.EventHandler(this.cb_Escolhe_Alternativa);
             // 
             // rb_Op_1
             // 
@@ -169,7 +182,7 @@
             this.rb_Op_1.TabStop = true;
             this.rb_Op_1.Tag = "0";
             this.rb_Op_1.UseVisualStyleBackColor = false;
-            this.rb_Op_1.CheckedChanged += new System.EventHandler(this.Rb_Op_1_CheckedChanged);
+            this.rb_Op_1.CheckedChanged += new System.EventHandler(this.cb_Escolhe_Alternativa);
             // 
             // lbl_Tempo
             // 
@@ -192,8 +205,10 @@
             this.lbl_Alternativa_4.Name = "lbl_Alternativa_4";
             this.lbl_Alternativa_4.Size = new System.Drawing.Size(686, 31);
             this.lbl_Alternativa_4.TabIndex = 14;
+            this.lbl_Alternativa_4.Tag = "3";
             this.lbl_Alternativa_4.Text = "Alternativa qualquer.";
             this.lbl_Alternativa_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Alternativa_4.Click += new System.EventHandler(this.lbl_Alternativa_Click);
             // 
             // lbl_Alternativa_3
             // 
@@ -204,8 +219,10 @@
             this.lbl_Alternativa_3.Name = "lbl_Alternativa_3";
             this.lbl_Alternativa_3.Size = new System.Drawing.Size(686, 31);
             this.lbl_Alternativa_3.TabIndex = 13;
+            this.lbl_Alternativa_3.Tag = "2";
             this.lbl_Alternativa_3.Text = "Alternativa qualquer.";
             this.lbl_Alternativa_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Alternativa_3.Click += new System.EventHandler(this.lbl_Alternativa_Click);
             // 
             // lbl_Alternativa_2
             // 
@@ -216,8 +233,10 @@
             this.lbl_Alternativa_2.Name = "lbl_Alternativa_2";
             this.lbl_Alternativa_2.Size = new System.Drawing.Size(686, 31);
             this.lbl_Alternativa_2.TabIndex = 12;
+            this.lbl_Alternativa_2.Tag = "1";
             this.lbl_Alternativa_2.Text = "Alternativa qualquer.";
             this.lbl_Alternativa_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Alternativa_2.Click += new System.EventHandler(this.lbl_Alternativa_Click);
             // 
             // btn_Pause
             // 
@@ -239,7 +258,7 @@
             this.btn_Pause.IconRightVisible = false;
             this.btn_Pause.IconRightZoom = 0D;
             this.btn_Pause.IconVisible = false;
-            this.btn_Pause.IconZoom = 90D;
+            this.btn_Pause.IconZoom = 0D;
             this.btn_Pause.IsTab = false;
             this.btn_Pause.Location = new System.Drawing.Point(762, -1);
             this.btn_Pause.Name = "btn_Pause";
@@ -247,12 +266,12 @@
             this.btn_Pause.OnHovercolor = System.Drawing.Color.WhiteSmoke;
             this.btn_Pause.OnHoverTextColor = System.Drawing.Color.MidnightBlue;
             this.btn_Pause.selected = false;
-            this.btn_Pause.Size = new System.Drawing.Size(38, 29);
+            this.btn_Pause.Size = new System.Drawing.Size(38, 30);
             this.btn_Pause.TabIndex = 11;
             this.btn_Pause.Text = " X";
             this.btn_Pause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pause.Textcolor = System.Drawing.Color.MidnightBlue;
-            this.btn_Pause.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pause.TextFont = new System.Drawing.Font("Calibri", 12F);
             this.btn_Pause.Click += new System.EventHandler(this.btn_Pause_Click);
             // 
             // lbl_Pergunta
@@ -287,20 +306,20 @@
             this.btn_Pular.IconRightVisible = false;
             this.btn_Pular.IconRightZoom = 0D;
             this.btn_Pular.IconVisible = false;
-            this.btn_Pular.IconZoom = 90D;
+            this.btn_Pular.IconZoom = 0D;
             this.btn_Pular.IsTab = false;
-            this.btn_Pular.Location = new System.Drawing.Point(696, -1);
+            this.btn_Pular.Location = new System.Drawing.Point(695, -1);
             this.btn_Pular.Name = "btn_Pular";
             this.btn_Pular.Normalcolor = System.Drawing.Color.White;
             this.btn_Pular.OnHovercolor = System.Drawing.Color.WhiteSmoke;
             this.btn_Pular.OnHoverTextColor = System.Drawing.Color.MidnightBlue;
             this.btn_Pular.selected = false;
-            this.btn_Pular.Size = new System.Drawing.Size(67, 29);
+            this.btn_Pular.Size = new System.Drawing.Size(67, 30);
             this.btn_Pular.TabIndex = 10;
             this.btn_Pular.Text = "PULAR";
             this.btn_Pular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pular.Textcolor = System.Drawing.Color.MidnightBlue;
-            this.btn_Pular.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pular.TextFont = new System.Drawing.Font("Calibri", 12F);
             this.btn_Pular.Click += new System.EventHandler(this.Btn_Pular_Click);
             // 
             // lbl_Alternativa_1
@@ -312,8 +331,10 @@
             this.lbl_Alternativa_1.Name = "lbl_Alternativa_1";
             this.lbl_Alternativa_1.Size = new System.Drawing.Size(686, 31);
             this.lbl_Alternativa_1.TabIndex = 8;
+            this.lbl_Alternativa_1.Tag = "0";
             this.lbl_Alternativa_1.Text = "Alternativa qualquer.";
             this.lbl_Alternativa_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Alternativa_1.Click += new System.EventHandler(this.lbl_Alternativa_Click);
             // 
             // elip_Form
             // 
@@ -349,29 +370,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // lollipopLabel1
-            // 
-            this.lollipopLabel1.AutoSize = true;
-            this.lollipopLabel1.BackColor = System.Drawing.Color.White;
-            this.lollipopLabel1.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            this.lollipopLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lollipopLabel1.Location = new System.Drawing.Point(628, 0);
-            this.lollipopLabel1.Name = "lollipopLabel1";
-            this.lollipopLabel1.Size = new System.Drawing.Size(51, 18);
-            this.lollipopLabel1.TabIndex = 26;
-            this.lollipopLabel1.Text = "Pulos :";
-            // 
-            // lbl_Pulos
-            // 
-            this.lbl_Pulos.AutoSize = true;
-            this.lbl_Pulos.BackColor = System.Drawing.Color.White;
-            this.lbl_Pulos.Font = new System.Drawing.Font("Roboto Medium", 10F);
-            this.lbl_Pulos.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_Pulos.Location = new System.Drawing.Point(679, 0);
-            this.lbl_Pulos.Name = "lbl_Pulos";
-            this.lbl_Pulos.Size = new System.Drawing.Size(0, 18);
-            this.lbl_Pulos.TabIndex = 27;
             // 
             // frm_Jogo
             // 
@@ -416,6 +414,5 @@
         private Bunifu.Framework.UI.BunifuElipse elip_Rb_5;
         private System.Windows.Forms.Timer timer1;
         private LollipopLabel lbl_Pulos;
-        private LollipopLabel lollipopLabel1;
     }
 }

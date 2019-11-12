@@ -17,36 +17,64 @@ namespace EducaINT
         private Random rand = new Random();
         private Aluno A;
         private TimeSpan Tempo = TimeSpan.FromSeconds(0);
-        private int pulo = 3;
 
         public frm_Jogo()
         {
             InitializeComponent();
             timer1.Enabled = true;
-            // escolher pergunta aleatória como achar melhor
-            //pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-            pergunta_em_jogo = new Pergunta();
-            pergunta_em_jogo.Alternativas.Add("Alternativa 1");
-            pergunta_em_jogo.Alternativas.Add("Alternativa 2");
-            pergunta_em_jogo.Alternativas.Add("Alternativa 3");
-            pergunta_em_jogo.Alternativas.Add("Alternativa 4");
-            pergunta_em_jogo.Alternativas.Add("Alternativa 5");
-            pergunta_em_jogo.Resposta_Certa = 1;
-            pergunta_em_jogo.Questao = "Questao x";
+            pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
             Load_Pergunta(pergunta_em_jogo);
         }
 
         private void Load_Pergunta(Pergunta pergunta)
         {
-            // carregar pergunta selecionada
-            Tempo = TimeSpan.FromSeconds(0);
-            lbl_Pergunta.Text = pergunta_em_jogo.Questao;
-            if(pergunta.Alternativas.Count>0)
+            if (frm_Tema.perguntas_selecionadas.Contains(pergunta))
             {
-                lbl_Alternativa_1.Text = pergunta.Alternativas[1];
-                if(pergunta.Alternativas.Count>1)
+                frm_Tema.perguntas_selecionadas.Remove(pergunta);
+            }
+            lbl_Pulos.Text = "Pulos: " + limite_pulo.ToString("00");
+            Tempo = TimeSpan.FromSeconds(0);
+            lbl_Tempo.Text = Tempo.ToString();
+            lbl_Pergunta.Text = pergunta_em_jogo.Questao;
+            if(pergunta.Alternativas.Count > 0)
+            {
+                lbl_Alternativa_1.Text = pergunta.Alternativas[0];
+                if(pergunta.Alternativas.Count > 1)
                 {
-                    lbl_Alternativa_2.Text = pergunta.Alternativas[2];
+                    lbl_Alternativa_2.Text = pergunta.Alternativas[1];
+                    if (pergunta.Alternativas.Count > 2)
+                    {
+                        lbl_Alternativa_3.Text = pergunta.Alternativas[2];
+                        if (pergunta.Alternativas.Count > 3)
+                        {
+                            lbl_Alternativa_4.Text = pergunta.Alternativas[3];
+                            if (pergunta.Alternativas.Count > 4)
+                            {
+                                lbl_Alternativa_5.Text = pergunta.Alternativas[4];
+                            }
+                            else
+                            {
+                                lbl_Alternativa_5.Visible = false;
+                                rb_Op_5.Visible = false;
+                            }
+                        }
+                        else
+                        {
+                            lbl_Alternativa_4.Visible = false;
+                            rb_Op_4.Visible = false;
+                            lbl_Alternativa_5.Visible = false;
+                            rb_Op_5.Visible = false;
+                        }
+                    }
+                    else
+                    {
+                        lbl_Alternativa_3.Visible = false;
+                        rb_Op_3.Visible = false;
+                        lbl_Alternativa_4.Visible = false;
+                        rb_Op_4.Visible = false;
+                        lbl_Alternativa_5.Visible = false;
+                        rb_Op_5.Visible = false;
+                    }
                 }
                 else
                 {
@@ -59,206 +87,115 @@ namespace EducaINT
                     lbl_Alternativa_5.Visible = false;
                     rb_Op_5.Visible = false;                    
                 }
-                if(pergunta.Alternativas.Count>2)
-                {
-                    lbl_Alternativa_2.Text = pergunta.Alternativas[2];
-                    lbl_Alternativa_3.Text = pergunta.Alternativas[3];
-                }
-                else
-                {
-                    lbl_Alternativa_3.Visible = false;
-                    rb_Op_3.Visible = false;
-                    lbl_Alternativa_4.Visible = false;
-                    rb_Op_4.Visible = false;
-                    lbl_Alternativa_5.Visible = false;
-                    rb_Op_5.Visible = false;
-                }
-                if(pergunta.Alternativas.Count>3)
-                {
-                    lbl_Alternativa_2.Text = pergunta.Alternativas[2];
-                    lbl_Alternativa_3.Text = pergunta.Alternativas[3];
-                    lbl_Alternativa_4.Text = pergunta.Alternativas[4];
-                }
-                else
-                {
-                    lbl_Alternativa_4.Visible = false;
-                    rb_Op_4.Visible = false;
-                    lbl_Alternativa_5.Visible = false;
-                    rb_Op_5.Visible = false;
-                }
-                if(pergunta.Alternativas.Count>4)
-                {
-                    lbl_Alternativa_2.Text = pergunta.Alternativas[2];
-                    lbl_Alternativa_3.Text = pergunta.Alternativas[3];
-                    lbl_Alternativa_4.Text = pergunta.Alternativas[4];                    
-                }
-                else
-                {
-                    lbl_Alternativa_5.Visible = false;
-                    rb_Op_5.Visible = false;
-                }
             }
-            
+            else
+            {
+                lbl_Alternativa_1.Visible = false;
+                rb_Op_1.Visible = false;
+                lbl_Alternativa_2.Visible = false;
+                rb_Op_2.Visible = false;
+                lbl_Alternativa_3.Visible = false;
+                rb_Op_3.Visible = false;
+                lbl_Alternativa_4.Visible = false;
+                rb_Op_4.Visible = false;
+                lbl_Alternativa_5.Visible = false;
+                rb_Op_5.Visible = false;
+            }
         }
 
         private void btn_Pause_Click(object sender, EventArgs e)
         {
-            //arrumar a opção de pausar
-            Close();
+            var result = MessageBox.Show("Vai mesmo sair?", "Ainda não acabou...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) { Close(); }
         }
 
-        private void Rb_Op_1_CheckedChanged(object sender, EventArgs e)
+        private void cb_Escolhe_Alternativa(object sender, EventArgs e)
         {
             LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (rb.Checked)
             {
-                if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
+                var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Parabéns, você acertou !!");
-                    //A.Pontuacao=rand.Next(1, 50);                    
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-                else
-                {
-                    MessageBox.Show("Resposta errada, não desista !");
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
+                    if (rb.Tag != null && rb.Tag.ToString() == (pergunta_em_jogo.Resposta_Certa).ToString())
+                    {
+                        timer1.Enabled = false;
+                        MessageBox.Show("Parabéns, você acertou !!");
+                        
+                        //A.Pontuacao=rand.Next(1, 50); 
+                        if (frm_Tema.perguntas_selecionadas.Count > 0)
+                        {
+                            pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
+                            Load_Pergunta(pergunta_em_jogo);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Parabéns, você concluiu estás perguntas!");
+                            Close();
+                        }
+                        timer1.Enabled = true;
+                    }
+                    else
+                    {
+                        timer1.Enabled = false;
+                        MessageBox.Show("Resposta errada, não desista!");
+                        if (frm_Tema.perguntas_selecionadas.Count > 0)
+                        {
+                            pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
+                            Load_Pergunta(pergunta_em_jogo);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Você concluiu estás perguntas, tente outras!");
+                            Close();
+                        }
+                    }
+                    rb.Checked = false;
                 }
             }
-        }
-
-        private void Rb_Op_2_CheckedChanged(object sender, EventArgs e)
-        {
-            LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
-            if (result==DialogResult.Yes)
-            {
-                if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
-                {
-                    MessageBox.Show("Parabéns, você acertou !!");
-                    //A.Pontuacao=rand.Next(1, 50);                    
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-                else
-                {
-                    MessageBox.Show("Resposta errada, não desista !");
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-            }
-           
-        }
-
-        private void Rb_Op_3_CheckedChanged(object sender, EventArgs e)
-        {
-            LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
-                {
-                    MessageBox.Show("Parabéns, você acertou !!");
-                    //A.Pontuacao=rand.Next(1, 50);                    
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-                else
-                {
-                    MessageBox.Show("Resposta errada, não desista !");
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-            }
-
-        }
-
-        private void Rb_Op_4_CheckedChanged(object sender, EventArgs e)
-        {
-            LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
-                {
-                    MessageBox.Show("Parabéns, você acertou !!");
-                    //A.Pontuacao=rand.Next(1, 50);                    
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-                else
-                {
-                    MessageBox.Show("Resposta errada, não desista !");
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-            }
-        }
-
-        private void Rb_Op_5_CheckedChanged(object sender, EventArgs e)
-        {
-            LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?","Responda!", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
-                {
-                    MessageBox.Show("Parabéns, você acertou !!");
-                    //A.Pontuacao=rand.Next(1, 50);                    
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-                else
-                {
-                    MessageBox.Show("Resposta errada, não desista !");
-                    pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
-                    Load_Pergunta(pergunta_em_jogo);
-                    Tempo = TimeSpan.FromSeconds(0);
-                }
-            }           
         }
 
         private void Btn_Pular_Click(object sender, EventArgs e)
         {
-            
-
             if (limite_pulo > 0)
             {
                 pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
                 Load_Pergunta(pergunta_em_jogo);
                 Tempo = TimeSpan.FromSeconds(0);
-                limite_pulo--;
-                pulo--;
-                lbl_Pulos.Text = pulo.ToString();
+                lbl_Pulos.Text = "Pulos: " + (--limite_pulo).ToString("00");
             }           
             else
             {
                 var Result2 = MessageBox.Show("Prefere tentar depois ?"," Não desista!",MessageBoxButtons.YesNo);
-                if (Result2 == DialogResult.Yes)
-                {
-                    Close();
-                }
-                else
-                    Close();
-                               
+                if (Result2 == DialogResult.Yes) { Close(); }                               
             }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            lbl_Tempo.Text = Tempo.ToString();
             Tempo += TimeSpan.FromSeconds(1);
+            lbl_Tempo.Text = Tempo.ToString();
+        }
+
+        private void lbl_Alternativa_Click(object sender, EventArgs e)
+        {
+            int index = int.Parse((sender as Label).Tag.ToString());
+            switch (index)
+            {
+                case 0: rb_Op_1.Checked = true;
+                    break;
+                case 1: rb_Op_2.Checked = true;
+                    break;
+                case 2: rb_Op_3.Checked = true;
+                    break;
+                case 3: rb_Op_4.Checked = true;
+                    break;
+                case 4: rb_Op_5.Checked = true;
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

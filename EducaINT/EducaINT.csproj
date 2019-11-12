@@ -70,7 +70,7 @@
     <Compile Include="Cadastro_Pergunta.Designer.cs">
       <DependentUpon>Cadastro_Pergunta.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClasseProf.cs" />
+    <Compile Include="Professor.cs" />
     <Compile Include="Data_Controller.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -91,11 +91,11 @@
       <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Pergunta.cs" />
-    <Compile Include="Professor.cs">
+    <Compile Include="Painel_Professor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Professor.Designer.cs">
-      <DependentUpon>Professor.cs</DependentUpon>
+    <Compile Include="Painel_Professor.Designer.cs">
+      <DependentUpon>Painel_Professor.cs</DependentUpon>
     </Compile>
     <Compile Include="Tema.cs">
       <SubType>Form</SubType>
@@ -126,8 +126,8 @@
     <EmbeddedResource Include="Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professor.resx">
-      <DependentUpon>Professor.cs</DependentUpon>
+    <EmbeddedResource Include="Painel_Professor.resx">
+      <DependentUpon>Painel_Professor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tema.resx">
       <DependentUpon>Tema.cs</DependentUpon>

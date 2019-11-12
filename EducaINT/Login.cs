@@ -34,18 +34,18 @@ namespace EducaINT
             new frm_Perfil().ShowDialog();
         }
 
-        private bool Aluno_Registrado(Aluno aluno_logado)
+        private bool Aluno_Registrado(Aluno aluno_logando)
         {
-            Aluno alunos = Data_Controller.Alunos.FirstOrDefault(aluno => aluno.Nome == aluno_logado.Nome && aluno.Senha ==aluno_logado.Senha);
-            if (alunos == null)
-                return true;
-            return false;
+            Aluno aluno_registrado = Data_Controller.Alunos.FirstOrDefault(aluno => aluno.Nome == aluno_logando.Nome && aluno.Senha == aluno_logando.Senha);
+            if (aluno_registrado != null) aluno_logado = aluno_registrado;
+            return aluno_registrado != null;
         }
 
         private void btn_Professor_Click(object sender, EventArgs e)
         {
             new frm_Autenticar_Professor().ShowDialog();
-            if(frm_Autenticar_Professor.liberar) new frm_Professor().ShowDialog();
+            if (frm_Autenticar_Professor.liberar) new frm_Professor().ShowDialog();
+            else MessageBox.Show("Acesso negado!");
         }
     }
 }
