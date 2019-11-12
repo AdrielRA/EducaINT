@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Jogo));
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lbl_Alternativa_5 = new System.Windows.Forms.Label();
+            this.rb_Op_5 = new LollipopRadioButton();
+            this.rb_Op_4 = new LollipopRadioButton();
+            this.rb_Op_3 = new LollipopRadioButton();
+            this.rb_Op_2 = new LollipopRadioButton();
+            this.rb_Op_1 = new LollipopRadioButton();
             this.lbl_Tempo = new System.Windows.Forms.Label();
             this.lbl_Alternativa_4 = new System.Windows.Forms.Label();
             this.lbl_Alternativa_3 = new System.Windows.Forms.Label();
@@ -40,17 +46,12 @@
             this.btn_Pular = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbl_Alternativa_1 = new System.Windows.Forms.Label();
             this.elip_Form = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.rb_Op_1 = new LollipopRadioButton();
-            this.rb_Op_2 = new LollipopRadioButton();
-            this.rb_Op_3 = new LollipopRadioButton();
-            this.rb_Op_4 = new LollipopRadioButton();
-            this.rb_Op_5 = new LollipopRadioButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.elip_Rb_1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_Rb_2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_Rb_3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_Rb_4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_Rb_5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnl_BG.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // 
             this.pnl_BG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BG.BackgroundImage")));
             this.pnl_BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl_BG.Controls.Add(this.label1);
+            this.pnl_BG.Controls.Add(this.lbl_Alternativa_5);
             this.pnl_BG.Controls.Add(this.rb_Op_5);
             this.pnl_BG.Controls.Add(this.rb_Op_4);
             this.pnl_BG.Controls.Add(this.rb_Op_3);
@@ -82,6 +83,89 @@
             this.pnl_BG.Quality = 10;
             this.pnl_BG.Size = new System.Drawing.Size(800, 450);
             this.pnl_BG.TabIndex = 4;
+            // 
+            // lbl_Alternativa_5
+            // 
+            this.lbl_Alternativa_5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Alternativa_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Alternativa_5.ForeColor = System.Drawing.Color.White;
+            this.lbl_Alternativa_5.Location = new System.Drawing.Point(71, 277);
+            this.lbl_Alternativa_5.Name = "lbl_Alternativa_5";
+            this.lbl_Alternativa_5.Size = new System.Drawing.Size(686, 31);
+            this.lbl_Alternativa_5.TabIndex = 25;
+            this.lbl_Alternativa_5.Text = "Alternativa qualquer.";
+            this.lbl_Alternativa_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // rb_Op_5
+            // 
+            this.rb_Op_5.AutoSize = true;
+            this.rb_Op_5.BackColor = System.Drawing.Color.Transparent;
+            this.rb_Op_5.CheckColor = "#162B7A";
+            this.rb_Op_5.Location = new System.Drawing.Point(46, 283);
+            this.rb_Op_5.Name = "rb_Op_5";
+            this.rb_Op_5.Size = new System.Drawing.Size(19, 19);
+            this.rb_Op_5.TabIndex = 24;
+            this.rb_Op_5.TabStop = true;
+            this.rb_Op_5.Tag = "4";
+            this.rb_Op_5.UseVisualStyleBackColor = false;
+            this.rb_Op_5.CheckedChanged += new System.EventHandler(this.Rb_Op_5_CheckedChanged);
+            // 
+            // rb_Op_4
+            // 
+            this.rb_Op_4.AutoSize = true;
+            this.rb_Op_4.BackColor = System.Drawing.Color.Transparent;
+            this.rb_Op_4.CheckColor = "#162B7A";
+            this.rb_Op_4.Location = new System.Drawing.Point(46, 232);
+            this.rb_Op_4.Name = "rb_Op_4";
+            this.rb_Op_4.Size = new System.Drawing.Size(19, 19);
+            this.rb_Op_4.TabIndex = 23;
+            this.rb_Op_4.TabStop = true;
+            this.rb_Op_4.Tag = "3";
+            this.rb_Op_4.UseVisualStyleBackColor = false;
+            this.rb_Op_4.CheckedChanged += new System.EventHandler(this.Rb_Op_4_CheckedChanged);
+            // 
+            // rb_Op_3
+            // 
+            this.rb_Op_3.AutoSize = true;
+            this.rb_Op_3.BackColor = System.Drawing.Color.Transparent;
+            this.rb_Op_3.CheckColor = "#162B7A";
+            this.rb_Op_3.Location = new System.Drawing.Point(46, 181);
+            this.rb_Op_3.Name = "rb_Op_3";
+            this.rb_Op_3.Size = new System.Drawing.Size(19, 19);
+            this.rb_Op_3.TabIndex = 22;
+            this.rb_Op_3.TabStop = true;
+            this.rb_Op_3.Tag = "2";
+            this.rb_Op_3.UseVisualStyleBackColor = false;
+            this.rb_Op_3.CheckedChanged += new System.EventHandler(this.Rb_Op_3_CheckedChanged);
+            // 
+            // rb_Op_2
+            // 
+            this.rb_Op_2.AutoSize = true;
+            this.rb_Op_2.BackColor = System.Drawing.Color.Transparent;
+            this.rb_Op_2.CheckColor = "#162B7A";
+            this.rb_Op_2.Location = new System.Drawing.Point(46, 130);
+            this.rb_Op_2.Name = "rb_Op_2";
+            this.rb_Op_2.Size = new System.Drawing.Size(19, 19);
+            this.rb_Op_2.TabIndex = 21;
+            this.rb_Op_2.TabStop = true;
+            this.rb_Op_2.Tag = "1";
+            this.rb_Op_2.UseVisualStyleBackColor = false;
+            this.rb_Op_2.CheckedChanged += new System.EventHandler(this.Rb_Op_2_CheckedChanged);
+            // 
+            // rb_Op_1
+            // 
+            this.rb_Op_1.AutoSize = true;
+            this.rb_Op_1.BackColor = System.Drawing.Color.Transparent;
+            this.rb_Op_1.CheckColor = "#162B7A";
+            this.rb_Op_1.Location = new System.Drawing.Point(46, 79);
+            this.rb_Op_1.Margin = new System.Windows.Forms.Padding(0);
+            this.rb_Op_1.Name = "rb_Op_1";
+            this.rb_Op_1.Size = new System.Drawing.Size(19, 19);
+            this.rb_Op_1.TabIndex = 20;
+            this.rb_Op_1.TabStop = true;
+            this.rb_Op_1.Tag = "0";
+            this.rb_Op_1.UseVisualStyleBackColor = false;
+            this.rb_Op_1.CheckedChanged += new System.EventHandler(this.Rb_Op_1_CheckedChanged);
             // 
             // lbl_Tempo
             // 
@@ -213,6 +297,7 @@
             this.btn_Pular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pular.Textcolor = System.Drawing.Color.MidnightBlue;
             this.btn_Pular.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pular.Click += new System.EventHandler(this.Btn_Pular_Click);
             // 
             // lbl_Alternativa_1
             // 
@@ -230,79 +315,6 @@
             // 
             this.elip_Form.ElipseRadius = 10;
             this.elip_Form.TargetControl = this;
-            // 
-            // rb_Op_1
-            // 
-            this.rb_Op_1.AutoSize = true;
-            this.rb_Op_1.BackColor = System.Drawing.Color.Transparent;
-            this.rb_Op_1.CheckColor = "#162B7A";
-            this.rb_Op_1.Location = new System.Drawing.Point(46, 79);
-            this.rb_Op_1.Margin = new System.Windows.Forms.Padding(0);
-            this.rb_Op_1.Name = "rb_Op_1";
-            this.rb_Op_1.Size = new System.Drawing.Size(19, 19);
-            this.rb_Op_1.TabIndex = 20;
-            this.rb_Op_1.TabStop = true;
-            this.rb_Op_1.UseVisualStyleBackColor = false;
-            // 
-            // rb_Op_2
-            // 
-            this.rb_Op_2.AutoSize = true;
-            this.rb_Op_2.BackColor = System.Drawing.Color.Transparent;
-            this.rb_Op_2.CheckColor = "#162B7A";
-            this.rb_Op_2.Location = new System.Drawing.Point(46, 130);
-            this.rb_Op_2.Name = "rb_Op_2";
-            this.rb_Op_2.Size = new System.Drawing.Size(19, 19);
-            this.rb_Op_2.TabIndex = 21;
-            this.rb_Op_2.TabStop = true;
-            this.rb_Op_2.UseVisualStyleBackColor = false;
-            // 
-            // rb_Op_3
-            // 
-            this.rb_Op_3.AutoSize = true;
-            this.rb_Op_3.BackColor = System.Drawing.Color.Transparent;
-            this.rb_Op_3.CheckColor = "#162B7A";
-            this.rb_Op_3.Location = new System.Drawing.Point(46, 181);
-            this.rb_Op_3.Name = "rb_Op_3";
-            this.rb_Op_3.Size = new System.Drawing.Size(19, 19);
-            this.rb_Op_3.TabIndex = 22;
-            this.rb_Op_3.TabStop = true;
-            this.rb_Op_3.UseVisualStyleBackColor = false;
-            // 
-            // rb_Op_4
-            // 
-            this.rb_Op_4.AutoSize = true;
-            this.rb_Op_4.BackColor = System.Drawing.Color.Transparent;
-            this.rb_Op_4.CheckColor = "#162B7A";
-            this.rb_Op_4.Location = new System.Drawing.Point(46, 232);
-            this.rb_Op_4.Name = "rb_Op_4";
-            this.rb_Op_4.Size = new System.Drawing.Size(19, 19);
-            this.rb_Op_4.TabIndex = 23;
-            this.rb_Op_4.TabStop = true;
-            this.rb_Op_4.UseVisualStyleBackColor = false;
-            // 
-            // rb_Op_5
-            // 
-            this.rb_Op_5.AutoSize = true;
-            this.rb_Op_5.BackColor = System.Drawing.Color.Transparent;
-            this.rb_Op_5.CheckColor = "#162B7A";
-            this.rb_Op_5.Location = new System.Drawing.Point(46, 283);
-            this.rb_Op_5.Name = "rb_Op_5";
-            this.rb_Op_5.Size = new System.Drawing.Size(19, 19);
-            this.rb_Op_5.TabIndex = 24;
-            this.rb_Op_5.TabStop = true;
-            this.rb_Op_5.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(71, 277);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(686, 31);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Alternativa qualquer.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // elip_Rb_1
             // 
@@ -328,6 +340,11 @@
             // 
             this.elip_Rb_5.ElipseRadius = 20;
             this.elip_Rb_5.TargetControl = this.rb_Op_5;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // frm_Jogo
             // 
@@ -360,7 +377,7 @@
         private System.Windows.Forms.Label lbl_Alternativa_2;
         private System.Windows.Forms.Label lbl_Tempo;
         private LollipopRadioButton rb_Op_1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Alternativa_5;
         private LollipopRadioButton rb_Op_5;
         private LollipopRadioButton rb_Op_4;
         private LollipopRadioButton rb_Op_3;
@@ -370,5 +387,6 @@
         private Bunifu.Framework.UI.BunifuElipse elip_Rb_3;
         private Bunifu.Framework.UI.BunifuElipse elip_Rb_4;
         private Bunifu.Framework.UI.BunifuElipse elip_Rb_5;
+        private System.Windows.Forms.Timer timer1;
     }
 }

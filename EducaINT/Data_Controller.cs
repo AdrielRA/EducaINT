@@ -28,8 +28,8 @@ namespace EducaINT
             path_perguntas = path_data + "perguntas.json";
             path_alunos = path_data + "alunos.json";
 
-            Alunos = Load_Alunos();
-            if (Alunos == null) Alunos = new List<Aluno>();
+            alunos = Load_Alunos();
+            if (alunos == null) alunos = new List<Aluno>();
 
             perguntas = Load_Perguntas();
             if (perguntas == null) perguntas = new List<Pergunta>();
