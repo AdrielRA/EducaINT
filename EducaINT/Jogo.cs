@@ -117,7 +117,7 @@ namespace EducaINT
                         timer1.Enabled = false;
                         MessageBox.Show("Parabéns, você acertou !!");
 
-                        resposta.pontos = new Random().Next(10, 50) + 100 / Tempo.TotalSeconds;
+                        resposta.pontos = pergunta_em_jogo.Pontuacao + new Random().Next(0, 10) + 100 / (Tempo.TotalSeconds > 1 ? 1 : Tempo.TotalSeconds);
 
                         if (frm_Tema.perguntas_selecionadas.Count > 0)
                         {

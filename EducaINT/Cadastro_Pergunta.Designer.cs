@@ -56,6 +56,7 @@
             this.drag_Form = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elip_Cadastro = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_Form = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.txt_Pontos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pnl_BG.SuspendLayout();
             this.pnl_Cadastro.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +123,7 @@
             this.pnl_Cadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_Cadastro.Controls.Add(this.txt_Pontos);
             this.pnl_Cadastro.Controls.Add(this.rb_Res_Certa_5);
             this.pnl_Cadastro.Controls.Add(this.rb_Res_Certa_4);
             this.pnl_Cadastro.Controls.Add(this.rb_Res_Certa_3);
@@ -426,7 +428,7 @@
             this.txt_Tema.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Tema.MaxLength = 32767;
             this.txt_Tema.Name = "txt_Tema";
-            this.txt_Tema.Size = new System.Drawing.Size(383, 37);
+            this.txt_Tema.Size = new System.Drawing.Size(250, 37);
             this.txt_Tema.TabIndex = 1;
             this.txt_Tema.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -535,6 +537,32 @@
             this.elip_Form.ElipseRadius = 10;
             this.elip_Form.TargetControl = this;
             // 
+            // txt_Pontos
+            // 
+            this.txt_Pontos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Pontos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Pontos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Pontos.BackColor = System.Drawing.Color.White;
+            this.txt_Pontos.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_Pontos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Pontos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_Pontos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
+            this.txt_Pontos.HintForeColor = System.Drawing.Color.Empty;
+            this.txt_Pontos.HintText = "Pontos";
+            this.txt_Pontos.isPassword = false;
+            this.txt_Pontos.LineFocusedColor = System.Drawing.Color.MidnightBlue;
+            this.txt_Pontos.LineIdleColor = System.Drawing.Color.RoyalBlue;
+            this.txt_Pontos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
+            this.txt_Pontos.LineThickness = 3;
+            this.txt_Pontos.Location = new System.Drawing.Point(281, 84);
+            this.txt_Pontos.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Pontos.MaxLength = 32767;
+            this.txt_Pontos.Name = "txt_Pontos";
+            this.txt_Pontos.Size = new System.Drawing.Size(125, 37);
+            this.txt_Pontos.TabIndex = 18;
+            this.txt_Pontos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // frm_Cadastro_Pergunta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -581,5 +609,6 @@
         private LollipopRadioButton rb_Res_Certa_3;
         private LollipopRadioButton rb_Res_Certa_2;
         private LollipopRadioButton rb_Res_Certa_1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txt_Pontos;
     }
 }

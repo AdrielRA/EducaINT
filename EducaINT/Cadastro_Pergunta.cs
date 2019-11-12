@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,9 @@ namespace EducaINT
             pergunta.Id = Data_Controller.Perguntas.Count + 1;
             pergunta.Questao = txt_Questão.Text;
             pergunta.Tema = txt_Tema.Text;
+            double pts = 10;
+            double.TryParse(txt_Pontos.Text.Replace(",", "."), NumberStyles.Any, new CultureInfo("pt-br"), out pts);
+            pergunta.Pontuacao = pts;
 
             if (cb_Resp_1.Checked) { pergunta.Alternativas.Add(txt_Alternativa_1.Text); }
             if (cb_Resp_2.Checked) { pergunta.Alternativas.Add(txt_Alternativa_2.Text); }

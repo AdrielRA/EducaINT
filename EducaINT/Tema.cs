@@ -64,11 +64,9 @@ namespace EducaINT
         {
             voltou = false;
 
-            //perguntas_selecionadas = Data_Controller.Perguntas.Where(p => p.Tema == tema_escolhido).ToList();
-
             perguntas_selecionadas = Data_Controller.Perguntas.Where(p => !frm_Login.aluno_logado.Respostas
-            .Select(r => r.id_pergunta).Contains(p.Id) ||
-            frm_Login.aluno_logado.Respostas.Where(r => !r.acertou).Select(r => r.id_pergunta).Contains(p.Id)).ToList();
+            .Select(r => r.id_pergunta).Contains(p.Id) || frm_Login.aluno_logado.Respostas
+            .Where(r => !r.acertou).Select(r => r.id_pergunta).Contains(p.Id)).ToList();
 
             perguntas_selecionadas = perguntas_selecionadas.Where(p => p.Tema == tema_escolhido).ToList();
 
