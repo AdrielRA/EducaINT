@@ -52,6 +52,8 @@
             this.elip_Rb_4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_Rb_5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lollipopLabel1 = new LollipopLabel();
+            this.lbl_Pulos = new LollipopLabel();
             this.pnl_BG.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,8 @@
             // 
             this.pnl_BG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BG.BackgroundImage")));
             this.pnl_BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_BG.Controls.Add(this.lbl_Pulos);
+            this.pnl_BG.Controls.Add(this.lollipopLabel1);
             this.pnl_BG.Controls.Add(this.lbl_Alternativa_5);
             this.pnl_BG.Controls.Add(this.rb_Op_5);
             this.pnl_BG.Controls.Add(this.rb_Op_4);
@@ -172,7 +176,7 @@
             this.lbl_Tempo.BackColor = System.Drawing.Color.White;
             this.lbl_Tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Tempo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbl_Tempo.Location = new System.Drawing.Point(0, -1);
+            this.lbl_Tempo.Location = new System.Drawing.Point(0, 0);
             this.lbl_Tempo.Name = "lbl_Tempo";
             this.lbl_Tempo.Size = new System.Drawing.Size(175, 29);
             this.lbl_Tempo.TabIndex = 19;
@@ -222,7 +226,7 @@
             this.btn_Pause.BackColor = System.Drawing.Color.White;
             this.btn_Pause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Pause.BorderRadius = 0;
-            this.btn_Pause.ButtonText = "I I";
+            this.btn_Pause.ButtonText = " X";
             this.btn_Pause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Pause.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Pause.Iconcolor = System.Drawing.Color.Transparent;
@@ -237,15 +241,15 @@
             this.btn_Pause.IconVisible = false;
             this.btn_Pause.IconZoom = 90D;
             this.btn_Pause.IsTab = false;
-            this.btn_Pause.Location = new System.Drawing.Point(730, -1);
+            this.btn_Pause.Location = new System.Drawing.Point(762, -1);
             this.btn_Pause.Name = "btn_Pause";
             this.btn_Pause.Normalcolor = System.Drawing.Color.White;
             this.btn_Pause.OnHovercolor = System.Drawing.Color.WhiteSmoke;
             this.btn_Pause.OnHoverTextColor = System.Drawing.Color.MidnightBlue;
             this.btn_Pause.selected = false;
-            this.btn_Pause.Size = new System.Drawing.Size(70, 29);
+            this.btn_Pause.Size = new System.Drawing.Size(38, 29);
             this.btn_Pause.TabIndex = 11;
-            this.btn_Pause.Text = "I I";
+            this.btn_Pause.Text = " X";
             this.btn_Pause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pause.Textcolor = System.Drawing.Color.MidnightBlue;
             this.btn_Pause.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -285,13 +289,13 @@
             this.btn_Pular.IconVisible = false;
             this.btn_Pular.IconZoom = 90D;
             this.btn_Pular.IsTab = false;
-            this.btn_Pular.Location = new System.Drawing.Point(631, -1);
+            this.btn_Pular.Location = new System.Drawing.Point(696, -1);
             this.btn_Pular.Name = "btn_Pular";
             this.btn_Pular.Normalcolor = System.Drawing.Color.White;
             this.btn_Pular.OnHovercolor = System.Drawing.Color.WhiteSmoke;
             this.btn_Pular.OnHoverTextColor = System.Drawing.Color.MidnightBlue;
             this.btn_Pular.selected = false;
-            this.btn_Pular.Size = new System.Drawing.Size(103, 29);
+            this.btn_Pular.Size = new System.Drawing.Size(67, 29);
             this.btn_Pular.TabIndex = 10;
             this.btn_Pular.Text = "PULAR";
             this.btn_Pular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -346,6 +350,29 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // lollipopLabel1
+            // 
+            this.lollipopLabel1.AutoSize = true;
+            this.lollipopLabel1.BackColor = System.Drawing.Color.White;
+            this.lollipopLabel1.Font = new System.Drawing.Font("Roboto Medium", 10F);
+            this.lollipopLabel1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lollipopLabel1.Location = new System.Drawing.Point(628, 0);
+            this.lollipopLabel1.Name = "lollipopLabel1";
+            this.lollipopLabel1.Size = new System.Drawing.Size(51, 18);
+            this.lollipopLabel1.TabIndex = 26;
+            this.lollipopLabel1.Text = "Pulos :";
+            // 
+            // lbl_Pulos
+            // 
+            this.lbl_Pulos.AutoSize = true;
+            this.lbl_Pulos.BackColor = System.Drawing.Color.White;
+            this.lbl_Pulos.Font = new System.Drawing.Font("Roboto Medium", 10F);
+            this.lbl_Pulos.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_Pulos.Location = new System.Drawing.Point(679, 0);
+            this.lbl_Pulos.Name = "lbl_Pulos";
+            this.lbl_Pulos.Size = new System.Drawing.Size(0, 18);
+            this.lbl_Pulos.TabIndex = 27;
+            // 
             // frm_Jogo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -388,5 +415,7 @@
         private Bunifu.Framework.UI.BunifuElipse elip_Rb_4;
         private Bunifu.Framework.UI.BunifuElipse elip_Rb_5;
         private System.Windows.Forms.Timer timer1;
+        private LollipopLabel lbl_Pulos;
+        private LollipopLabel lollipopLabel1;
     }
 }

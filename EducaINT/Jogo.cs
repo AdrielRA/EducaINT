@@ -17,6 +17,8 @@ namespace EducaINT
         private Random rand = new Random();
         private Aluno A;
         private TimeSpan Tempo = TimeSpan.FromSeconds(0);
+        private int pulo = 3;
+
         public frm_Jogo()
         {
             InitializeComponent();
@@ -101,15 +103,15 @@ namespace EducaINT
 
         private void btn_Pause_Click(object sender, EventArgs e)
         {
-            // arrumar op de pausar
+            //arrumar a opção de pausar
             Close();
         }
 
         private void Rb_Op_1_CheckedChanged(object sender, EventArgs e)
         {
             LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?");
-            if (result == DialogResult.OK)
+            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
                 {
@@ -121,7 +123,7 @@ namespace EducaINT
                 }
                 else
                 {
-                    MessageBox.Show("Tente Novamente !");
+                    MessageBox.Show("Resposta errada, não desista !");
                     pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
                     Load_Pergunta(pergunta_em_jogo);
                     Tempo = TimeSpan.FromSeconds(0);
@@ -132,8 +134,8 @@ namespace EducaINT
         private void Rb_Op_2_CheckedChanged(object sender, EventArgs e)
         {
             LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?");
-            if(result==DialogResult.OK)
+            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
+            if (result==DialogResult.Yes)
             {
                 if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
                 {
@@ -145,7 +147,7 @@ namespace EducaINT
                 }
                 else
                 {
-                    MessageBox.Show("Tente Novamente !");
+                    MessageBox.Show("Resposta errada, não desista !");
                     pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
                     Load_Pergunta(pergunta_em_jogo);
                     Tempo = TimeSpan.FromSeconds(0);
@@ -157,8 +159,8 @@ namespace EducaINT
         private void Rb_Op_3_CheckedChanged(object sender, EventArgs e)
         {
             LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?");
-            if (result == DialogResult.OK)
+            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
                 {
@@ -170,7 +172,7 @@ namespace EducaINT
                 }
                 else
                 {
-                    MessageBox.Show("Tente Novamente !");
+                    MessageBox.Show("Resposta errada, não desista !");
                     pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
                     Load_Pergunta(pergunta_em_jogo);
                     Tempo = TimeSpan.FromSeconds(0);
@@ -182,8 +184,8 @@ namespace EducaINT
         private void Rb_Op_4_CheckedChanged(object sender, EventArgs e)
         {
             LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?");
-            if (result == DialogResult.OK)
+            var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
                 {
@@ -195,7 +197,7 @@ namespace EducaINT
                 }
                 else
                 {
-                    MessageBox.Show("Tente Novamente !");
+                    MessageBox.Show("Resposta errada, não desista !");
                     pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
                     Load_Pergunta(pergunta_em_jogo);
                     Tempo = TimeSpan.FromSeconds(0);
@@ -206,8 +208,8 @@ namespace EducaINT
         private void Rb_Op_5_CheckedChanged(object sender, EventArgs e)
         {
             LollipopRadioButton rb = sender as LollipopRadioButton;
-            var result = MessageBox.Show("Você tem certeza ?");
-            if (result == DialogResult.OK)
+            var result = MessageBox.Show("Você tem certeza ?","Responda!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 if (rb.Tag != null && rb.Tag.ToString() == pergunta_em_jogo.Resposta_Certa.ToString())
                 {
@@ -219,32 +221,37 @@ namespace EducaINT
                 }
                 else
                 {
-                    MessageBox.Show("Tente Novamente !");                    
+                    MessageBox.Show("Resposta errada, não desista !");
                     pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
                     Load_Pergunta(pergunta_em_jogo);
                     Tempo = TimeSpan.FromSeconds(0);
                 }
-            }
+            }           
         }
 
         private void Btn_Pular_Click(object sender, EventArgs e)
         {
+            
+
             if (limite_pulo > 0)
             {
                 pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
                 Load_Pergunta(pergunta_em_jogo);
                 Tempo = TimeSpan.FromSeconds(0);
                 limite_pulo--;
-            }
+                pulo--;
+                lbl_Pulos.Text = pulo.ToString();
+            }           
             else
             {
-                var Result2 = MessageBox.Show("Desistir ?",",atenção",MessageBoxButtons.YesNo);
-                if(Result2==DialogResult.Yes)
+                var Result2 = MessageBox.Show("Prefere tentar depois ?"," Não desista!",MessageBoxButtons.YesNo);
+                if (Result2 == DialogResult.Yes)
                 {
                     Close();
                 }
-                MessageBox.Show("Limite de pulo esgotado...");
-                
+                else
+                    Close();
+                               
             }
         }
 
