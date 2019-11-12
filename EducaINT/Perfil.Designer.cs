@@ -48,6 +48,7 @@
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.pic_Arte = new System.Windows.Forms.PictureBox();
             this.elip_Foto = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.lblNome = new System.Windows.Forms.Label();
             this.pnl_Perfil.SuspendLayout();
             this.pnl_Prog_2.SuspendLayout();
             this.pnl_Prog_1.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             this.pnl_Perfil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnl_Perfil.Controls.Add(this.lblNome);
             this.pnl_Perfil.Controls.Add(this.pnl_Prog_2);
             this.pnl_Perfil.Controls.Add(this.pnl_Prog_1);
             this.pnl_Perfil.Controls.Add(this.pic_Aluno);
@@ -86,9 +88,9 @@
             // 
             this.pnl_Prog_2.Controls.Add(this.prog_Bar_2);
             this.pnl_Prog_2.Controls.Add(this.lbl_Pro_Desc_2);
-            this.pnl_Prog_2.Location = new System.Drawing.Point(13, 262);
+            this.pnl_Prog_2.Location = new System.Drawing.Point(15, 283);
             this.pnl_Prog_2.Name = "pnl_Prog_2";
-            this.pnl_Prog_2.Size = new System.Drawing.Size(240, 63);
+            this.pnl_Prog_2.Size = new System.Drawing.Size(240, 55);
             this.pnl_Prog_2.TabIndex = 10;
             // 
             // prog_Bar_2
@@ -119,16 +121,16 @@
             // 
             this.pnl_Prog_1.Controls.Add(this.prog_Bar_1);
             this.pnl_Prog_1.Controls.Add(this.lbl_Pro_Desc_1);
-            this.pnl_Prog_1.Location = new System.Drawing.Point(13, 193);
+            this.pnl_Prog_1.Location = new System.Drawing.Point(15, 223);
             this.pnl_Prog_1.Name = "pnl_Prog_1";
-            this.pnl_Prog_1.Size = new System.Drawing.Size(240, 63);
+            this.pnl_Prog_1.Size = new System.Drawing.Size(240, 54);
             this.pnl_Prog_1.TabIndex = 9;
             // 
             // prog_Bar_1
             // 
             this.prog_Bar_1.BackColor = System.Drawing.Color.Silver;
             this.prog_Bar_1.BorderRadius = 5;
-            this.prog_Bar_1.Location = new System.Drawing.Point(6, 33);
+            this.prog_Bar_1.Location = new System.Drawing.Point(6, 37);
             this.prog_Bar_1.MaximumValue = 100;
             this.prog_Bar_1.Name = "prog_Bar_1";
             this.prog_Bar_1.ProgressColor = System.Drawing.Color.MidnightBlue;
@@ -142,7 +144,7 @@
             this.lbl_Pro_Desc_1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Pro_Desc_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Pro_Desc_1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbl_Pro_Desc_1.Location = new System.Drawing.Point(3, 2);
+            this.lbl_Pro_Desc_1.Location = new System.Drawing.Point(3, 9);
             this.lbl_Pro_Desc_1.Name = "lbl_Pro_Desc_1";
             this.lbl_Pro_Desc_1.Size = new System.Drawing.Size(173, 16);
             this.lbl_Pro_Desc_1.TabIndex = 8;
@@ -196,7 +198,7 @@
             this.btn_Sair.IconVisible = false;
             this.btn_Sair.IconZoom = 90D;
             this.btn_Sair.IsTab = false;
-            this.btn_Sair.Location = new System.Drawing.Point(12, 375);
+            this.btn_Sair.Location = new System.Drawing.Point(14, 388);
             this.btn_Sair.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Normalcolor = System.Drawing.Color.MidnightBlue;
@@ -270,7 +272,7 @@
             this.btn_Jogar.IconVisible = false;
             this.btn_Jogar.IconZoom = 90D;
             this.btn_Jogar.IsTab = false;
-            this.btn_Jogar.Location = new System.Drawing.Point(12, 331);
+            this.btn_Jogar.Location = new System.Drawing.Point(14, 344);
             this.btn_Jogar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_Jogar.Name = "btn_Jogar";
             this.btn_Jogar.Normalcolor = System.Drawing.Color.MidnightBlue;
@@ -310,7 +312,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Titulo.AutoEllipsis = true;
             this.lbl_Titulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Geometr415 Blk BT", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_Titulo.Location = new System.Drawing.Point(272, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
@@ -338,6 +340,18 @@
             this.elip_Foto.ElipseRadius = 30;
             this.elip_Foto.TargetControl = this.pic_Aluno;
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblNome.Location = new System.Drawing.Point(18, 196);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(57, 16);
+            this.lblNome.TabIndex = 10;
+            this.lblNome.Text = "Nome: ";
+            // 
             // frm_Perfil
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -349,6 +363,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form3";
             this.pnl_Perfil.ResumeLayout(false);
+            this.pnl_Perfil.PerformLayout();
             this.pnl_Prog_2.ResumeLayout(false);
             this.pnl_Prog_2.PerformLayout();
             this.pnl_Prog_1.ResumeLayout(false);
@@ -380,5 +395,6 @@
         private System.Windows.Forms.Label lbl_Pro_Desc_1;
         private System.Windows.Forms.PictureBox pic_Aluno;
         private Bunifu.Framework.UI.BunifuElipse elip_Foto;
+        private System.Windows.Forms.Label lblNome;
     }
 }
