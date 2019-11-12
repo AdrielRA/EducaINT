@@ -25,6 +25,7 @@ namespace EducaINT
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
+            pergunta.Id = Data_Controller.Perguntas.Count + 1;
             pergunta.Questao = txt_Questão.Text;
             pergunta.Tema = txt_Tema.Text;
 

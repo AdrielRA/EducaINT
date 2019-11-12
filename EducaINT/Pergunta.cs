@@ -6,7 +6,7 @@ namespace EducaINT
     {
         // Aqui todos os metodos e propriedades para esta classe!
         private string tema;
-
+        private int id;
         private List<string> alternativas;
         private int resposta_Certa;
         private double pontuacao;
@@ -17,6 +17,7 @@ namespace EducaINT
         public int Resposta_Certa { get => resposta_Certa; set => resposta_Certa = value; }
         public double Pontuacao { get => pontuacao; set => pontuacao = value; }
         public string Questao { get => questao; set => questao = value; }
+        public int Id { get => id; set => id = value; }
 
         public Pergunta ()
         {

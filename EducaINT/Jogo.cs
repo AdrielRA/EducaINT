@@ -107,12 +107,18 @@ namespace EducaINT
                 var result = MessageBox.Show("Você tem certeza ?", "Responda!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    if (rb.Tag != null && rb.Tag.ToString() == (pergunta_em_jogo.Resposta_Certa).ToString())
+                    bool acertou_resposta = rb.Tag != null && rb.Tag.ToString() == (pergunta_em_jogo.Resposta_Certa).ToString();
+                    
+                    frm_Login.aluno_logado.Respostas = frm_Login.aluno_logado.Respostas.Where(r => r.id_pergunta != pergunta_em_jogo.Id).ToList();
+                    Aluno.Resposta resposta = new Aluno.Resposta() { id_pergunta = pergunta_em_jogo.Id, acertou = acertou_resposta };
+                    
+                    if (acertou_resposta)
                     {
                         timer1.Enabled = false;
                         MessageBox.Show("Parabéns, você acertou !!");
-                        
-                        //A.Pontuacao=rand.Next(1, 50); 
+
+                        resposta.pontos = new Random().Next(10, 50) + 100 / Tempo.TotalSeconds;
+
                         if (frm_Tema.perguntas_selecionadas.Count > 0)
                         {
                             pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
@@ -120,7 +126,7 @@ namespace EducaINT
                         }
                         else
                         {
-                            MessageBox.Show("Parabéns, você concluiu estás perguntas!");
+                            MessageBox.Show("Parabéns, você concluiu\nestas perguntas!");
                             Close();
                         }
                         timer1.Enabled = true;
@@ -129,6 +135,9 @@ namespace EducaINT
                     {
                         timer1.Enabled = false;
                         MessageBox.Show("Resposta errada, não desista!");
+
+                        resposta.pontos = 0;
+
                         if (frm_Tema.perguntas_selecionadas.Count > 0)
                         {
                             pergunta_em_jogo = frm_Tema.perguntas_selecionadas[new Random().Next(0, frm_Tema.perguntas_selecionadas.Count)];
@@ -140,6 +149,9 @@ namespace EducaINT
                             Close();
                         }
                     }
+
+                    frm_Login.aluno_logado.Respostas.Add(resposta);
+                    Data_Controller.Save_Alunos_To_Storage();
                     rb.Checked = false;
                 }
             }

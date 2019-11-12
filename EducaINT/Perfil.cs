@@ -30,7 +30,7 @@ namespace EducaINT
             if (Data_Controller.Perguntas.Count > 0)
             {
                 new frm_Tema().ShowDialog();
-                if (!frm_Tema.voltou) new frm_Jogo().ShowDialog();
+                if (!frm_Tema.voltou && frm_Tema.perguntas_selecionadas.Count > 0) new frm_Jogo().ShowDialog();
             }
             else
             {

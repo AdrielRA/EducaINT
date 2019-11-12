@@ -63,7 +63,20 @@ namespace EducaINT
         private void btn_Avançar_Click(object sender, EventArgs e)
         {
             voltou = false;
-            perguntas_selecionadas = Data_Controller.Perguntas.Where(p => p.Tema == tema_escolhido).ToList();
+
+            //perguntas_selecionadas = Data_Controller.Perguntas.Where(p => p.Tema == tema_escolhido).ToList();
+
+            perguntas_selecionadas = Data_Controller.Perguntas.Where(p => !frm_Login.aluno_logado.Respostas
+            .Select(r => r.id_pergunta).Contains(p.Id) ||
+            frm_Login.aluno_logado.Respostas.Where(r => !r.acertou).Select(r => r.id_pergunta).Contains(p.Id)).ToList();
+
+            perguntas_selecionadas = perguntas_selecionadas.Where(p => p.Tema == tema_escolhido).ToList();
+
+            if(perguntas_selecionadas.Count == 0)
+            {
+                MessageBox.Show("Não temos mais perguntas de\n" + tema_escolhido + " para você no momento!");
+            }
+
             Close();
         }
 
@@ -85,6 +98,11 @@ namespace EducaINT
                     Load_Tema();
                 }
             }
+        }
+
+        private void lbl_Info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Use as setas do teclado:\n\n- Para cima\n- Para baixo\n\npara selecionar o tema!");
         }
     }
 }

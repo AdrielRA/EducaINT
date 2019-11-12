@@ -110,7 +110,7 @@
             this.btn_Fechar.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Fechar.selected = false;
             this.btn_Fechar.Size = new System.Drawing.Size(45, 38);
-            this.btn_Fechar.TabIndex = 5;
+            this.btn_Fechar.TabIndex = 18;
             this.btn_Fechar.Text = "X";
             this.btn_Fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Fechar.Textcolor = System.Drawing.Color.White;
@@ -154,7 +154,7 @@
             this.rb_Res_Certa_5.Location = new System.Drawing.Point(384, 275);
             this.rb_Res_Certa_5.Name = "rb_Res_Certa_5";
             this.rb_Res_Certa_5.Size = new System.Drawing.Size(19, 19);
-            this.rb_Res_Certa_5.TabIndex = 31;
+            this.rb_Res_Certa_5.TabIndex = 11;
             this.rb_Res_Certa_5.Tag = "5";
             this.rb_Res_Certa_5.UseVisualStyleBackColor = true;
             this.rb_Res_Certa_5.Click += new System.EventHandler(this.rb_Res_Certa_1_Click);
@@ -166,7 +166,7 @@
             this.rb_Res_Certa_4.Location = new System.Drawing.Point(384, 240);
             this.rb_Res_Certa_4.Name = "rb_Res_Certa_4";
             this.rb_Res_Certa_4.Size = new System.Drawing.Size(19, 19);
-            this.rb_Res_Certa_4.TabIndex = 30;
+            this.rb_Res_Certa_4.TabIndex = 10;
             this.rb_Res_Certa_4.Tag = "4";
             this.rb_Res_Certa_4.UseVisualStyleBackColor = true;
             this.rb_Res_Certa_4.Click += new System.EventHandler(this.rb_Res_Certa_1_Click);
@@ -178,7 +178,7 @@
             this.rb_Res_Certa_3.Location = new System.Drawing.Point(384, 205);
             this.rb_Res_Certa_3.Name = "rb_Res_Certa_3";
             this.rb_Res_Certa_3.Size = new System.Drawing.Size(19, 19);
-            this.rb_Res_Certa_3.TabIndex = 29;
+            this.rb_Res_Certa_3.TabIndex = 9;
             this.rb_Res_Certa_3.Tag = "3";
             this.rb_Res_Certa_3.UseVisualStyleBackColor = true;
             this.rb_Res_Certa_3.Click += new System.EventHandler(this.rb_Res_Certa_1_Click);
@@ -190,7 +190,7 @@
             this.rb_Res_Certa_2.Location = new System.Drawing.Point(384, 170);
             this.rb_Res_Certa_2.Name = "rb_Res_Certa_2";
             this.rb_Res_Certa_2.Size = new System.Drawing.Size(19, 19);
-            this.rb_Res_Certa_2.TabIndex = 28;
+            this.rb_Res_Certa_2.TabIndex = 8;
             this.rb_Res_Certa_2.Tag = "2";
             this.rb_Res_Certa_2.UseVisualStyleBackColor = true;
             this.rb_Res_Certa_2.Click += new System.EventHandler(this.rb_Res_Certa_1_Click);
@@ -203,7 +203,7 @@
             this.rb_Res_Certa_1.Location = new System.Drawing.Point(384, 135);
             this.rb_Res_Certa_1.Name = "rb_Res_Certa_1";
             this.rb_Res_Certa_1.Size = new System.Drawing.Size(19, 19);
-            this.rb_Res_Certa_1.TabIndex = 27;
+            this.rb_Res_Certa_1.TabIndex = 7;
             this.rb_Res_Certa_1.TabStop = true;
             this.rb_Res_Certa_1.Tag = "1";
             this.rb_Res_Certa_1.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@
             this.cb_Resp_5.Location = new System.Drawing.Point(25, 274);
             this.cb_Resp_5.Name = "cb_Resp_5";
             this.cb_Resp_5.Size = new System.Drawing.Size(20, 20);
-            this.cb_Resp_5.TabIndex = 26;
+            this.cb_Resp_5.TabIndex = 16;
             this.cb_Resp_5.Tag = "5";
             // 
             // cb_Resp_4
@@ -232,7 +232,7 @@
             this.cb_Resp_4.Location = new System.Drawing.Point(25, 239);
             this.cb_Resp_4.Name = "cb_Resp_4";
             this.cb_Resp_4.Size = new System.Drawing.Size(20, 20);
-            this.cb_Resp_4.TabIndex = 25;
+            this.cb_Resp_4.TabIndex = 15;
             this.cb_Resp_4.Tag = "4";
             // 
             // cb_Resp_3
@@ -245,7 +245,7 @@
             this.cb_Resp_3.Location = new System.Drawing.Point(25, 204);
             this.cb_Resp_3.Name = "cb_Resp_3";
             this.cb_Resp_3.Size = new System.Drawing.Size(20, 20);
-            this.cb_Resp_3.TabIndex = 24;
+            this.cb_Resp_3.TabIndex = 14;
             this.cb_Resp_3.Tag = "3";
             // 
             // cb_Resp_2
@@ -258,7 +258,7 @@
             this.cb_Resp_2.Location = new System.Drawing.Point(25, 169);
             this.cb_Resp_2.Name = "cb_Resp_2";
             this.cb_Resp_2.Size = new System.Drawing.Size(20, 20);
-            this.cb_Resp_2.TabIndex = 23;
+            this.cb_Resp_2.TabIndex = 13;
             this.cb_Resp_2.Tag = "2";
             // 
             // txt_Alternativa_5
@@ -284,7 +284,7 @@
             this.txt_Alternativa_5.MaxLength = 32767;
             this.txt_Alternativa_5.Name = "txt_Alternativa_5";
             this.txt_Alternativa_5.Size = new System.Drawing.Size(327, 33);
-            this.txt_Alternativa_5.TabIndex = 22;
+            this.txt_Alternativa_5.TabIndex = 6;
             this.txt_Alternativa_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // cb_Resp_1
@@ -297,7 +297,7 @@
             this.cb_Resp_1.Location = new System.Drawing.Point(25, 134);
             this.cb_Resp_1.Name = "cb_Resp_1";
             this.cb_Resp_1.Size = new System.Drawing.Size(20, 20);
-            this.cb_Resp_1.TabIndex = 21;
+            this.cb_Resp_1.TabIndex = 12;
             this.cb_Resp_1.Tag = "1";
             // 
             // txt_Alternativa_4
@@ -323,7 +323,7 @@
             this.txt_Alternativa_4.MaxLength = 32767;
             this.txt_Alternativa_4.Name = "txt_Alternativa_4";
             this.txt_Alternativa_4.Size = new System.Drawing.Size(327, 33);
-            this.txt_Alternativa_4.TabIndex = 20;
+            this.txt_Alternativa_4.TabIndex = 5;
             this.txt_Alternativa_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txt_Alternativa_3
@@ -349,7 +349,7 @@
             this.txt_Alternativa_3.MaxLength = 32767;
             this.txt_Alternativa_3.Name = "txt_Alternativa_3";
             this.txt_Alternativa_3.Size = new System.Drawing.Size(327, 33);
-            this.txt_Alternativa_3.TabIndex = 19;
+            this.txt_Alternativa_3.TabIndex = 4;
             this.txt_Alternativa_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txt_Alternativa_2
@@ -375,7 +375,7 @@
             this.txt_Alternativa_2.MaxLength = 32767;
             this.txt_Alternativa_2.Name = "txt_Alternativa_2";
             this.txt_Alternativa_2.Size = new System.Drawing.Size(327, 33);
-            this.txt_Alternativa_2.TabIndex = 18;
+            this.txt_Alternativa_2.TabIndex = 3;
             this.txt_Alternativa_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txt_Alternativa_1
@@ -401,7 +401,7 @@
             this.txt_Alternativa_1.MaxLength = 32767;
             this.txt_Alternativa_1.Name = "txt_Alternativa_1";
             this.txt_Alternativa_1.Size = new System.Drawing.Size(327, 33);
-            this.txt_Alternativa_1.TabIndex = 17;
+            this.txt_Alternativa_1.TabIndex = 2;
             this.txt_Alternativa_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txt_Tema
@@ -427,7 +427,7 @@
             this.txt_Tema.MaxLength = 32767;
             this.txt_Tema.Name = "txt_Tema";
             this.txt_Tema.Size = new System.Drawing.Size(383, 37);
-            this.txt_Tema.TabIndex = 16;
+            this.txt_Tema.TabIndex = 1;
             this.txt_Tema.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // LOGIN
@@ -474,7 +474,7 @@
             this.btn_Salvar.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Salvar.selected = false;
             this.btn_Salvar.Size = new System.Drawing.Size(383, 39);
-            this.btn_Salvar.TabIndex = 13;
+            this.btn_Salvar.TabIndex = 17;
             this.btn_Salvar.Text = "SALVAR";
             this.btn_Salvar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Salvar.Textcolor = System.Drawing.Color.White;
@@ -515,7 +515,7 @@
             this.txt_Questão.MaxLength = 32767;
             this.txt_Questão.Name = "txt_Questão";
             this.txt_Questão.Size = new System.Drawing.Size(383, 37);
-            this.txt_Questão.TabIndex = 10;
+            this.txt_Questão.TabIndex = 0;
             this.txt_Questão.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // drag_Form

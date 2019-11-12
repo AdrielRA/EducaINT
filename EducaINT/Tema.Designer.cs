@@ -45,6 +45,7 @@
             this.lbl_Frase = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.btn_Avançar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbl_Info = new System.Windows.Forms.Label();
             this.pnl_BG.SuspendLayout();
             this.pnl_TemaSelect.SuspendLayout();
             this.pnl_TemaInf.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             this.pnl_BG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_BG.BackgroundImage")));
             this.pnl_BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_BG.Controls.Add(this.lbl_Info);
             this.pnl_BG.Controls.Add(this.btn_Voltar);
             this.pnl_BG.Controls.Add(this.pnl_TemaSelect);
             this.pnl_BG.Controls.Add(this.pnl_TemaInf);
@@ -363,6 +365,20 @@
             this.btn_Avançar.TextFont = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Avançar.Click += new System.EventHandler(this.btn_Avançar_Click);
             // 
+            // lbl_Info
+            // 
+            this.lbl_Info.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Info.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Info.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Info.ForeColor = System.Drawing.Color.White;
+            this.lbl_Info.Location = new System.Drawing.Point(726, 9);
+            this.lbl_Info.Name = "lbl_Info";
+            this.lbl_Info.Size = new System.Drawing.Size(62, 57);
+            this.lbl_Info.TabIndex = 11;
+            this.lbl_Info.Text = "🛈";
+            this.lbl_Info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Info.Click += new System.EventHandler(this.lbl_Info_Click);
+            // 
             // frm_Tema
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -400,5 +416,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label lbl_MateriaInf;
         private System.Windows.Forms.Label lbl_MateriaTop;
+        private System.Windows.Forms.Label lbl_Info;
     }
 }

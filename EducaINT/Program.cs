@@ -16,7 +16,8 @@ namespace EducaINT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Login());
+            try { Application.Run(new frm_Login()); }
+            catch { MessageBox.Show("Algo deu errado :(\n\nChame o professor!", "Ohh não...", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }
