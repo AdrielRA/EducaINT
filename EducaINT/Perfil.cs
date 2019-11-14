@@ -17,22 +17,8 @@ namespace EducaINT
             InitializeComponent();
             pic_Aluno.Image = new Bitmap(frm_Escolher_Avatar.avatar);
             lblNome.Text += frm_Login.aluno_logado.Nome;
-            //if (frm_Login.aluno_logado.Respostas.Count==0)
-            //{
-            //    prog_Bar_1.Value = 0;   
-            //}
-            //else
-            //{
-                prog_Bar_1.Value = (int)(frm_Login.aluno_logado.Respostas.Count/(double)Data_Controller.Perguntas.Count*100);
-            //}
-            //if (frm_Login.aluno_logado.Respostas.Count==0)
-            //{
-            //    prog_Bar_2.Value = 0;
-            //}
-            //else
-            //{
-                prog_Bar_2.Value = (int)(frm_Login.aluno_logado.Respostas.Where(r => r.acertou).Count()/(double)frm_Login.aluno_logado.Respostas.Count*100);
-            //}            
+            prog_Bar_1.Value = (int)(frm_Login.aluno_logado.Respostas.Count/(double)Data_Controller.Perguntas.Count*100);
+            prog_Bar_2.Value = (int)(frm_Login.aluno_logado.Respostas.Where(r => r.acertou).Count()/(double)frm_Login.aluno_logado.Respostas.Count*100);           
         }
 
         private void btn_Sair_Click(object sender, EventArgs e)
