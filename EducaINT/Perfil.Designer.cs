@@ -33,6 +33,7 @@
             this.elip_Form = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elip_PanelPerfil = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_Perfil = new System.Windows.Forms.Panel();
+            this.lblNome = new System.Windows.Forms.Label();
             this.pnl_Prog_2 = new System.Windows.Forms.Panel();
             this.prog_Bar_2 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.lbl_Pro_Desc_2 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.pic_Arte = new System.Windows.Forms.PictureBox();
             this.elip_Foto = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lblNome = new System.Windows.Forms.Label();
             this.pnl_Perfil.SuspendLayout();
             this.pnl_Prog_2.SuspendLayout();
             this.pnl_Prog_1.SuspendLayout();
@@ -84,6 +84,18 @@
             this.pnl_Perfil.Size = new System.Drawing.Size(266, 450);
             this.pnl_Perfil.TabIndex = 0;
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblNome.Location = new System.Drawing.Point(18, 196);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(57, 16);
+            this.lblNome.TabIndex = 10;
+            this.lblNome.Text = "Nome: ";
+            // 
             // pnl_Prog_2
             // 
             this.pnl_Prog_2.Controls.Add(this.prog_Bar_2);
@@ -103,7 +115,7 @@
             this.prog_Bar_2.ProgressColor = System.Drawing.Color.MidnightBlue;
             this.prog_Bar_2.Size = new System.Drawing.Size(222, 10);
             this.prog_Bar_2.TabIndex = 10;
-            this.prog_Bar_2.Value = 68;
+            this.prog_Bar_2.Value = 0;
             // 
             // lbl_Pro_Desc_2
             // 
@@ -136,7 +148,7 @@
             this.prog_Bar_1.ProgressColor = System.Drawing.Color.MidnightBlue;
             this.prog_Bar_1.Size = new System.Drawing.Size(222, 10);
             this.prog_Bar_1.TabIndex = 9;
-            this.prog_Bar_1.Value = 25;
+            this.prog_Bar_1.Value = 0;
             // 
             // lbl_Pro_Desc_1
             // 
@@ -339,18 +351,6 @@
             // 
             this.elip_Foto.ElipseRadius = 30;
             this.elip_Foto.TargetControl = this.pic_Aluno;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblNome.Location = new System.Drawing.Point(18, 196);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(57, 16);
-            this.lblNome.TabIndex = 10;
-            this.lblNome.Text = "Nome: ";
             // 
             // frm_Perfil
             // 
