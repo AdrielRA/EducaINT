@@ -92,7 +92,7 @@
             this.lblNome.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblNome.Location = new System.Drawing.Point(18, 196);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(57, 16);
+            this.lblNome.Size = new System.Drawing.Size(60, 16);
             this.lblNome.TabIndex = 10;
             this.lblNome.Text = "Nome: ";
             // 
@@ -115,7 +115,7 @@
             this.prog_Bar_2.ProgressColor = System.Drawing.Color.MidnightBlue;
             this.prog_Bar_2.Size = new System.Drawing.Size(222, 10);
             this.prog_Bar_2.TabIndex = 10;
-            this.prog_Bar_2.Value = 0;
+            this.prog_Bar_2.Value = 68;
             // 
             // lbl_Pro_Desc_2
             // 
@@ -125,7 +125,7 @@
             this.lbl_Pro_Desc_2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbl_Pro_Desc_2.Location = new System.Drawing.Point(3, 0);
             this.lbl_Pro_Desc_2.Name = "lbl_Pro_Desc_2";
-            this.lbl_Pro_Desc_2.Size = new System.Drawing.Size(164, 16);
+            this.lbl_Pro_Desc_2.Size = new System.Drawing.Size(168, 16);
             this.lbl_Pro_Desc_2.TabIndex = 9;
             this.lbl_Pro_Desc_2.Text = "Percentual de acertos:";
             // 
@@ -148,7 +148,7 @@
             this.prog_Bar_1.ProgressColor = System.Drawing.Color.MidnightBlue;
             this.prog_Bar_1.Size = new System.Drawing.Size(222, 10);
             this.prog_Bar_1.TabIndex = 9;
-            this.prog_Bar_1.Value = 0;
+            this.prog_Bar_1.Value = 25;
             // 
             // lbl_Pro_Desc_1
             // 
@@ -158,7 +158,7 @@
             this.lbl_Pro_Desc_1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbl_Pro_Desc_1.Location = new System.Drawing.Point(3, 9);
             this.lbl_Pro_Desc_1.Name = "lbl_Pro_Desc_1";
-            this.lbl_Pro_Desc_1.Size = new System.Drawing.Size(173, 16);
+            this.lbl_Pro_Desc_1.Size = new System.Drawing.Size(176, 16);
             this.lbl_Pro_Desc_1.TabIndex = 8;
             this.lbl_Pro_Desc_1.Text = "Perguntas respondidas:";
             // 
@@ -324,7 +324,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Titulo.AutoEllipsis = true;
             this.lbl_Titulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Font = new System.Drawing.Font("Geometr415 Blk BT", 60F);
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_Titulo.Location = new System.Drawing.Point(272, 9);
             this.lbl_Titulo.Name = "lbl_Titulo";
@@ -360,6 +360,8 @@
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Perfil";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form3";
             this.pnl_Perfil.ResumeLayout(false);

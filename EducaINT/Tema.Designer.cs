@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Tema));
             this.elip_Form = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lbl_Info = new System.Windows.Forms.Label();
             this.btn_Voltar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_TemaSelect = new System.Windows.Forms.Panel();
             this.lbl_MateriaEscolhida = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.lbl_Frase = new System.Windows.Forms.Label();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.btn_Avançar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbl_Info = new System.Windows.Forms.Label();
             this.pnl_BG.SuspendLayout();
             this.pnl_TemaSelect.SuspendLayout();
             this.pnl_TemaInf.SuspendLayout();
@@ -79,6 +79,20 @@
             this.pnl_BG.Quality = 10;
             this.pnl_BG.Size = new System.Drawing.Size(800, 450);
             this.pnl_BG.TabIndex = 3;
+            // 
+            // lbl_Info
+            // 
+            this.lbl_Info.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Info.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Info.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Info.ForeColor = System.Drawing.Color.White;
+            this.lbl_Info.Location = new System.Drawing.Point(726, 9);
+            this.lbl_Info.Name = "lbl_Info";
+            this.lbl_Info.Size = new System.Drawing.Size(62, 57);
+            this.lbl_Info.TabIndex = 11;
+            this.lbl_Info.Text = "🛈";
+            this.lbl_Info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Info.Click += new System.EventHandler(this.lbl_Info_Click);
             // 
             // btn_Voltar
             // 
@@ -365,20 +379,6 @@
             this.btn_Avançar.TextFont = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Avançar.Click += new System.EventHandler(this.btn_Avançar_Click);
             // 
-            // lbl_Info
-            // 
-            this.lbl_Info.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Info.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Info.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Info.ForeColor = System.Drawing.Color.White;
-            this.lbl_Info.Location = new System.Drawing.Point(726, 9);
-            this.lbl_Info.Name = "lbl_Info";
-            this.lbl_Info.Size = new System.Drawing.Size(62, 57);
-            this.lbl_Info.TabIndex = 11;
-            this.lbl_Info.Text = "🛈";
-            this.lbl_Info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_Info.Click += new System.EventHandler(this.lbl_Info_Click);
-            // 
             // frm_Tema
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -388,6 +388,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "frm_Tema";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form4";
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frm_Tema_KeyUp);

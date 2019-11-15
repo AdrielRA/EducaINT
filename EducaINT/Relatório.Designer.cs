@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Relatório));
             this.pnl_Cadastro = new System.Windows.Forms.Panel();
+            this.btn_RelRespostaAlunos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbl_RELATÓRIO = new System.Windows.Forms.Label();
             this.btn_RelPerguntas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.elip_Cadastro = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btn_RelRespostaAlunos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_Cadastro.SuspendLayout();
             this.pnl_BG.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,46 @@
             this.pnl_Cadastro.Name = "pnl_Cadastro";
             this.pnl_Cadastro.Size = new System.Drawing.Size(444, 207);
             this.pnl_Cadastro.TabIndex = 0;
+            // 
+            // btn_RelRespostaAlunos
+            // 
+            this.btn_RelRespostaAlunos.Active = false;
+            this.btn_RelRespostaAlunos.Activecolor = System.Drawing.Color.MidnightBlue;
+            this.btn_RelRespostaAlunos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_RelRespostaAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
+            this.btn_RelRespostaAlunos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_RelRespostaAlunos.BorderRadius = 0;
+            this.btn_RelRespostaAlunos.ButtonText = "RESPOSTAS DE ALUNOS";
+            this.btn_RelRespostaAlunos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_RelRespostaAlunos.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_RelRespostaAlunos.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.btn_RelRespostaAlunos.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_RelRespostaAlunos.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_RelRespostaAlunos.Iconimage")));
+            this.btn_RelRespostaAlunos.Iconimage_right = null;
+            this.btn_RelRespostaAlunos.Iconimage_right_Selected = null;
+            this.btn_RelRespostaAlunos.Iconimage_Selected = null;
+            this.btn_RelRespostaAlunos.IconMarginLeft = 0;
+            this.btn_RelRespostaAlunos.IconMarginRight = 0;
+            this.btn_RelRespostaAlunos.IconRightVisible = false;
+            this.btn_RelRespostaAlunos.IconRightZoom = 0D;
+            this.btn_RelRespostaAlunos.IconVisible = false;
+            this.btn_RelRespostaAlunos.IconZoom = 90D;
+            this.btn_RelRespostaAlunos.IsTab = false;
+            this.btn_RelRespostaAlunos.Location = new System.Drawing.Point(24, 110);
+            this.btn_RelRespostaAlunos.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_RelRespostaAlunos.Name = "btn_RelRespostaAlunos";
+            this.btn_RelRespostaAlunos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
+            this.btn_RelRespostaAlunos.OnHovercolor = System.Drawing.Color.MidnightBlue;
+            this.btn_RelRespostaAlunos.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_RelRespostaAlunos.selected = false;
+            this.btn_RelRespostaAlunos.Size = new System.Drawing.Size(397, 39);
+            this.btn_RelRespostaAlunos.TabIndex = 19;
+            this.btn_RelRespostaAlunos.Text = "RESPOSTAS DE ALUNOS";
+            this.btn_RelRespostaAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_RelRespostaAlunos.Textcolor = System.Drawing.Color.White;
+            this.btn_RelRespostaAlunos.TextFont = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RelRespostaAlunos.Click += new System.EventHandler(this.btn_RelRespostaAlunos_Click);
             // 
             // lbl_RELATÓRIO
             // 
@@ -139,46 +179,6 @@
             this.elip_Cadastro.ElipseRadius = 10;
             this.elip_Cadastro.TargetControl = this.pnl_Cadastro;
             // 
-            // btn_RelRespostaAlunos
-            // 
-            this.btn_RelRespostaAlunos.Active = false;
-            this.btn_RelRespostaAlunos.Activecolor = System.Drawing.Color.MidnightBlue;
-            this.btn_RelRespostaAlunos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_RelRespostaAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
-            this.btn_RelRespostaAlunos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_RelRespostaAlunos.BorderRadius = 0;
-            this.btn_RelRespostaAlunos.ButtonText = "RESPOSTAS DE ALUNOS";
-            this.btn_RelRespostaAlunos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_RelRespostaAlunos.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_RelRespostaAlunos.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
-            this.btn_RelRespostaAlunos.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_RelRespostaAlunos.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_RelRespostaAlunos.Iconimage")));
-            this.btn_RelRespostaAlunos.Iconimage_right = null;
-            this.btn_RelRespostaAlunos.Iconimage_right_Selected = null;
-            this.btn_RelRespostaAlunos.Iconimage_Selected = null;
-            this.btn_RelRespostaAlunos.IconMarginLeft = 0;
-            this.btn_RelRespostaAlunos.IconMarginRight = 0;
-            this.btn_RelRespostaAlunos.IconRightVisible = false;
-            this.btn_RelRespostaAlunos.IconRightZoom = 0D;
-            this.btn_RelRespostaAlunos.IconVisible = false;
-            this.btn_RelRespostaAlunos.IconZoom = 90D;
-            this.btn_RelRespostaAlunos.IsTab = false;
-            this.btn_RelRespostaAlunos.Location = new System.Drawing.Point(24, 110);
-            this.btn_RelRespostaAlunos.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_RelRespostaAlunos.Name = "btn_RelRespostaAlunos";
-            this.btn_RelRespostaAlunos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
-            this.btn_RelRespostaAlunos.OnHovercolor = System.Drawing.Color.MidnightBlue;
-            this.btn_RelRespostaAlunos.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_RelRespostaAlunos.selected = false;
-            this.btn_RelRespostaAlunos.Size = new System.Drawing.Size(397, 39);
-            this.btn_RelRespostaAlunos.TabIndex = 19;
-            this.btn_RelRespostaAlunos.Text = "RESPOSTAS DE ALUNOS";
-            this.btn_RelRespostaAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_RelRespostaAlunos.Textcolor = System.Drawing.Color.White;
-            this.btn_RelRespostaAlunos.TextFont = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RelRespostaAlunos.Click += new System.EventHandler(this.btn_RelRespostaAlunos_Click);
-            // 
             // frm_Relatório
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -187,6 +187,8 @@
             this.Font = new System.Drawing.Font("Calibri", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_Relatório";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Relatório";
             this.pnl_Cadastro.ResumeLayout(false);

@@ -31,4 +31,14 @@ namespace EducaINT
             Respostas = new List<Resposta>();
         }
     }
+
+    public class Data_Aluno
+    {
+        private string nome;
+        private int qnt_Respostas, qnt_Acertos;
+
+        public string Nome { get => nome; set => nome = value; }
+        public int Qnt_Respostas { get => qnt_Respostas; set => qnt_Respostas = value; }
+        public int Qnt_Acertos { get => qnt_Acertos; set => qnt_Acertos = value; }
+    }
 }

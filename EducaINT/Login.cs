@@ -19,6 +19,15 @@ namespace EducaINT
             InitializeComponent();
             Data_Controller.Start_Controller();
             lbl_Titulo.Parent = pic_Banner;
+            Clear_Controls();
+        }
+
+        private void Clear_Controls()
+        {
+            txt_NomeUsuario.Text = txt_NomeUsuario.HintText;
+            txt_Senha.Text = txt_Senha.HintText;
+            txt_NomeUsuario.Focus();
+            txt_NomeUsuario.Select();
         }
 
         private void btn_Fechar_Click(object sender, EventArgs e) { Application.Exit(); }
@@ -32,6 +41,7 @@ namespace EducaINT
             if (!Aluno_Registrado(aluno_logado)) { Data_Controller.Add_Aluno(aluno_logado); }
             new frm_Escolher_Avatar().ShowDialog();
             new frm_Perfil().ShowDialog();
+            Clear_Controls();
         }
 
         private bool Aluno_Registrado(Aluno aluno_logando)

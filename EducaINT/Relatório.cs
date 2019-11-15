@@ -19,12 +19,14 @@ namespace EducaINT
 
         private void btn_RelPerguntas_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gerar relatório de perguntas");
+            //MessageBox.Show("Gerar relatório de perguntas");
+            new frm_Relatório_Perguntas().ShowDialog();
         }
 
         private void btn_RelRespostaAlunos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gerar relatório de respostas");
+            //MessageBox.Show("Gerar relatório de respostas");
+            new frm_Relatório_Alunos().ShowDialog();
         }
     }
 }

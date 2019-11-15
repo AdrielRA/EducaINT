@@ -17,8 +17,16 @@ namespace EducaINT
             InitializeComponent();
             pic_Aluno.Image = new Bitmap(frm_Escolher_Avatar.avatar);
             lblNome.Text += frm_Login.aluno_logado.Nome;
-            prog_Bar_1.Value = (int)(frm_Login.aluno_logado.Respostas.Count/(double)Data_Controller.Perguntas.Count*100);
-            prog_Bar_2.Value = (int)(frm_Login.aluno_logado.Respostas.Where(r => r.acertou).Count()/(double)frm_Login.aluno_logado.Respostas.Count*100);           
+            Load_ProgBar_Values();
+        }
+
+        private void Load_ProgBar_Values()
+        {
+            lbl_Pro_Desc_1.Text = "Perguntas respondidas: " + frm_Login.aluno_logado.Respostas.Count + " de " + Data_Controller.Perguntas.Count;
+            prog_Bar_1.Value = (int)(frm_Login.aluno_logado.Respostas.Count / (double)Data_Controller.Perguntas.Count * 100);
+            int percentual = (int)(frm_Login.aluno_logado.Respostas.Where(r => r.acertou).Count() / (double)frm_Login.aluno_logado.Respostas.Count * 100);
+            lbl_Pro_Desc_2.Text = "Percentual de acertos: " + percentual + "%";
+            prog_Bar_2.Value = percentual;
         }
 
         private void btn_Sair_Click(object sender, EventArgs e)
@@ -29,10 +37,11 @@ namespace EducaINT
 
         private void btn_Jogar_Click(object sender, EventArgs e)
         {
-            if (Data_Controller.Perguntas.Count > 0)
+            if (Data_Controller.Perguntas.Count > 0 && Data_Controller.Perguntas.Count - frm_Login.aluno_logado.Respostas.Count > 0)
             {
                 new frm_Tema().ShowDialog();
                 if (!frm_Tema.voltou && frm_Tema.perguntas_selecionadas.Count > 0) new frm_Jogo().ShowDialog();
+                Load_ProgBar_Values();
             }
             else
             {

@@ -4,7 +4,6 @@ namespace EducaINT
 {
     public class Pergunta
     {
-        // Aqui todos os metodos e propriedades para esta classe!
         private string tema;
         private int id;
         private List<string> alternativas;
