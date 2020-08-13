@@ -23,8 +23,8 @@ namespace EducaINT
         private void Load_ProgBar_Values()
         {
             lbl_Pro_Desc_1.Text = "Perguntas respondidas: " + frm_Login.aluno_logado.Respostas.Count + " de " + Data_Controller.Perguntas.Count;
-            prog_Bar_1.Value = (int)(frm_Login.aluno_logado.Respostas.Count / (double)Data_Controller.Perguntas.Count * 100);
-            int percentual = (int)(frm_Login.aluno_logado.Respostas.Where(r => r.acertou).Count() / (double)frm_Login.aluno_logado.Respostas.Count * 100);
+            prog_Bar_1.Value = (int)(frm_Login.aluno_logado.Respostas.Count / (double)(Data_Controller.Perguntas.Count == 0? 1 : Data_Controller.Perguntas.Count) * 100);
+            int percentual = (int)(frm_Login.aluno_logado.Respostas.Where(r => r.acertou).Count() / (double)(frm_Login.aluno_logado.Respostas.Count == 0 ? 1 : frm_Login.aluno_logado.Respostas.Count) * 100);
             lbl_Pro_Desc_2.Text = "Percentual de acertos: " + percentual + "%";
             prog_Bar_2.Value = percentual;
         }

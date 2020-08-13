@@ -21,7 +21,7 @@ namespace EducaINT
         {
             //MessageBox.Show("Gerar relatório de perguntas");
             new frm_Relatório_Perguntas().ShowDialog();
-        } 
+        }
 
         private void btn_RelRespostaAlunos_Click(object sender, EventArgs e)
         {

@@ -48,6 +48,7 @@
             this.pnl_BG = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_Fechar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.drag_Form = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.btn_Info = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_Login.SuspendLayout();
             this.pnl_Formulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Banner)).BeginInit();
@@ -83,6 +84,7 @@
             this.pnl_Formulario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_Formulario.Controls.Add(this.btn_Info);
             this.pnl_Formulario.Controls.Add(this.label1);
             this.pnl_Formulario.Controls.Add(this.btn_Professor);
             this.pnl_Formulario.Controls.Add(this.LOGIN);
@@ -242,7 +244,7 @@
             this.txt_Senha.BackColor = System.Drawing.Color.White;
             this.txt_Senha.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Senha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Senha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txt_Senha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
             this.txt_Senha.HintForeColor = System.Drawing.Color.Empty;
             this.txt_Senha.HintText = "Senha";
@@ -268,7 +270,7 @@
             this.txt_NomeUsuario.BackColor = System.Drawing.Color.White;
             this.txt_NomeUsuario.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_NomeUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_NomeUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_NomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txt_NomeUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
             this.txt_NomeUsuario.HintForeColor = System.Drawing.Color.Empty;
             this.txt_NomeUsuario.HintText = "Nome de Usuário";
@@ -289,7 +291,7 @@
             // 
             this.lbl_Titulo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Geometr415 Blk BT", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(43)))), ((int)(((byte)(122)))));
             this.lbl_Titulo.Location = new System.Drawing.Point(0, 0);
             this.lbl_Titulo.Name = "lbl_Titulo";
@@ -413,6 +415,46 @@
             this.drag_Form.TargetControl = this.pnl_BG;
             this.drag_Form.Vertical = true;
             // 
+            // btn_Info
+            // 
+            this.btn_Info.Active = false;
+            this.btn_Info.Activecolor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_Info.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Info.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btn_Info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Info.BorderRadius = 0;
+            this.btn_Info.ButtonText = "?";
+            this.btn_Info.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Info.DisabledColor = System.Drawing.SystemColors.Control;
+            this.btn_Info.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.btn_Info.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Info.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Info.Iconimage")));
+            this.btn_Info.Iconimage_right = null;
+            this.btn_Info.Iconimage_right_Selected = null;
+            this.btn_Info.Iconimage_Selected = null;
+            this.btn_Info.IconMarginLeft = 0;
+            this.btn_Info.IconMarginRight = 0;
+            this.btn_Info.IconRightVisible = false;
+            this.btn_Info.IconRightZoom = 0D;
+            this.btn_Info.IconVisible = false;
+            this.btn_Info.IconZoom = 90D;
+            this.btn_Info.IsTab = false;
+            this.btn_Info.Location = new System.Drawing.Point(355, 254);
+            this.btn_Info.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Info.Name = "btn_Info";
+            this.btn_Info.Normalcolor = System.Drawing.SystemColors.ControlDark;
+            this.btn_Info.OnHovercolor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_Info.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Info.selected = false;
+            this.btn_Info.Size = new System.Drawing.Size(39, 39);
+            this.btn_Info.TabIndex = 8;
+            this.btn_Info.Text = "?";
+            this.btn_Info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Info.Textcolor = System.Drawing.Color.White;
+            this.btn_Info.TextFont = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Info.Click += new System.EventHandler(this.btn_Info_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -453,6 +495,7 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Fechar;
         private Bunifu.Framework.UI.BunifuDragControl drag_Form;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Info;
     }
 }
 

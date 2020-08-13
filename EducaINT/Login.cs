@@ -19,6 +19,7 @@ namespace EducaINT
             InitializeComponent();
             Data_Controller.Start_Controller();
             lbl_Titulo.Parent = pic_Banner;
+            label1.Text = "UNIFENAS - " + DateTime.Today.Year.ToString();
             Clear_Controls();
         }
 
@@ -56,6 +57,29 @@ namespace EducaINT
             new frm_Autenticar_Professor().ShowDialog();
             if (frm_Autenticar_Professor.liberar) new frm_Professor().ShowDialog();
             else MessageBox.Show("Acesso negado!");
+        }
+
+        private void btn_Info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"Conteudistas:
+Jéssica Hendiara Almeida Nunes
+Letícia Aparecida Silva
+Mayara de Souza Novais
+Rafaela Maria da Silva
+
+Desenvolvedores:
+Adriel Ricardo Azevedo
+Eder Costa Maciel
+Juscimara Cristina Borges
+Lucas Robert de Abreu
+Suzane Freire Albino
+
+Organizadores:
+Flávia Aparecida Oliveira Santos
+Maria Cristina da Silva
+Patrícia Carolina de Souza Pereira
+
+GitHub: https://github.com/AdrielRA/EducaINT", "Créditos:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }
